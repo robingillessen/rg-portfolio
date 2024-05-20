@@ -1,11 +1,43 @@
 "use client";
 
+import { useState } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
+import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
+interface Project {
+  id: number;
+  title: string;
+  des: string;
+  img: string;
+  iconLists: string[];
+  link: string;
+}
+
 const RecentProjects = () => {
+  const [currentProject, setCurrentProject] = useState<Project | null>();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (project: Project) => {
+    setCurrentProject(project);
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setCurrentProject(null);
+  };
+
   return (
     <div id="recent-projects" className="py-20">
       <h1 className="heading">
@@ -17,11 +49,9 @@ const RecentProjects = () => {
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
+            onClick={() => handleClick(item)}
           >
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
+            <PinContainer title="Click">
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -76,6 +106,29 @@ const RecentProjects = () => {
           </div>
         ))}
       </div>
+      {currentProject && (
+        <Dialog open={isOpen} onOpenChange={handleClose}>
+          <DialogTrigger className="hidden">Open</DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle className="text-2xl pb-4">
+                {currentProject.title}
+              </DialogTitle>
+              <DialogDescription className="text-base whitespace-pre-wrap pb-8">
+                {currentProject.des}
+              </DialogDescription>
+              <Link
+                href={currentProject.link}
+                className="text-greenish-500 mt-8 cursor-pointer font-bold"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View live website
+              </Link>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   );
 };
