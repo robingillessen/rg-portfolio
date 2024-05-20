@@ -18,7 +18,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Succesfully working remotely for 3 years.",
+    title: "Developing web apps since 2020",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -72,11 +72,11 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Lay Design Studio",
+    des: "Created a branded website for a design studio using Next.js and Tailwind CSS. The site features a modern design and smooth animations. The website is connected to a headless CMS for content management.",
+    img: "/laydesign.jpg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/sanity.png", "/fm.svg"],
+    link: "https://laydesignstudio.nl",
   },
   {
     id: 2,
