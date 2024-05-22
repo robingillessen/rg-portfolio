@@ -73,9 +73,9 @@ export const projects = [
   {
     id: 1,
     title: "Lay Design Studio",
-    des: `Created a branded website for a design studio using Next.js and Tailwind CSS. 
+    des: `Created a branded website for a design studio using Next.js, TypeScript, SanityCMS and Tailwind CSS.
     
-The site features a modern design and smooth animations. The website is connected to a headless CMS for content management.`,
+    The site features a modern design and smooth animations. The website is connected to a headless CMS for content management.`,
     img: "/laydesign.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/sanity.png", "/fm.svg"],
     link: "https://laydesignstudio.nl",
@@ -93,7 +93,7 @@ The site features a modern design and smooth animations. The website is connecte
   {
     id: 3,
     title: "Reliving",
-    des: "Involved in the development of various upgrades and features. Improved the data tracking solution by implementing multiple event tracking. Enhanced the user experience by building out the designs for an improved product page and developed the front end for a the new AI chatbot feature from scratch.",
+    des: "Involved in the development of various upgrades and features. Improved the data tracking solution by making relevant data available throughout the application and implementing multiple events. Enhanced the user experience by building out the designs for an improved product page and developed the front end for the new AI chatbot feature from scratch.",
     img: "/reliving.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.png", "/sass.png"],
     link: "https://www.reliving.com",
