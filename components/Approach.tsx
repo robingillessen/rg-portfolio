@@ -28,9 +28,7 @@ const Approach = () => {
         <Card
           title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          des="We'll choose the right tools to track progress and I will provide you with regular updates. We plan for feedback and revisions to ensure the final product is beyond expectations."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -50,9 +48,7 @@ const Approach = () => {
         <Card
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          des="I translate the approved design into a fully functional website or features. I deliver a tested product that is scalable and ready for deployment."
         >
           <CanvasRevealEffect
             animationSpeed={3}
