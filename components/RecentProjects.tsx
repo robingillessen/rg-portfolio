@@ -39,7 +39,7 @@ const RecentProjects = () => {
   };
 
   return (
-    <div id="projects" className="py-20">
+    <div id="projects" className="py-20 h-fit overflow-hidden">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-greenish-500">recent projects</span>
