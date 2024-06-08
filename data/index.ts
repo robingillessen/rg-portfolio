@@ -96,7 +96,7 @@ export const projects = [
     des: "Involved in the development of various upgrades and features. Improved the data tracking solution by making relevant data available throughout the application and implementing multiple events. Enhanced the user experience by building out the designs for an improved product page and developed the front end for the new AI chatbot feature from scratch.",
     img: "/reliving.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.png", "/sass.png"],
-    link: "https://www.reliving.com",
+    link: "https://www.reliving.nl",
   },
   {
     id: 4,
