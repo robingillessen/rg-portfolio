@@ -35,6 +35,7 @@ const Footer = () => {
           icon={<FaLocationArrow />}
           position="right"
           handleClick={() => linkToWebPage("https://wa.me/31641244565")}
+          otherClasses="z-[1]"
         />
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">

@@ -64,7 +64,6 @@ const Hero = () => {
             icon={<FaLocationArrow />}
             position="right"
             handleClick={() => scrollToHash("#projects")}
-            otherClasses="z-1"
           />
         </div>
       </div>

@@ -19,7 +19,7 @@ const BorderButton = ({
   return (
     <div
       className={cn(
-        `w-fit h-fit border-button relative flex justify-center mt-12`,
+        "w-fit h-fit border-button relative flex justify-center mt-12",
         otherClasses
       )}
     >
