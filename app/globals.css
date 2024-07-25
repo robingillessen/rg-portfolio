@@ -83,3 +83,51 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
+.border-button {
+  position: relative;
+  padding: 1.5px; /* Zorg ervoor dat de padding op het parent element wordt toegepast */
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.border-button::after,
+.border-button::before {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  top: -1.5px; /* Compenseer de padding */
+  left: -1.5px; /* Compenseer de padding */
+  right: -1.5px; /* Compenseer de padding */
+  bottom: -1.5px; /* Compenseer de padding */
+  background-image: conic-gradient(
+    from var(--angle),
+    #18caa1,
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #18caa1
+  );
+  z-index: -1;
+  border-radius: 12px; /* Zorg ervoor dat de border-radius consistent is */
+  animation: 3s spin linear infinite;
+}
+
+.border-button::before {
+  filter: blur(20px);
+  opacity: 0.3;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 350deg;
+  }
+}

@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -73,9 +73,7 @@ export const projects = [
   {
     id: 1,
     title: "Lay Design Studio",
-    des: `Created a branded website for a design studio using Next.js, TypeScript, SanityCMS and Tailwind CSS.
-    
-    The site features a modern design and smooth animations. The website is connected to a headless CMS for content management.`,
+    des: `Created a branded website for a design studio using Next.js, TypeScript, SanityCMS and Tailwind CSS. The site features a modern design and smooth animations. The website is connected to a headless CMS for content management.`,
     img: "/laydesign.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/sanity.png", "/fm.svg"],
     link: "https://laydesignstudio.nl",
@@ -83,9 +81,7 @@ export const projects = [
   {
     id: 2,
     title: "Flexnote",
-    des: `Lightweight notification service for non-developer business owners. 
-    
-    The admin is built with Next.js, Tailwind CSS and TypeScript and the backend is built with Node.js and Express. The service is hosted on Vercel and Render.com. The widget itself is built with Vanilla JS & CSS to ensure compatibility with any website.`,
+    des: `Lightweight notification service for non-developer business owners. The admin is built with Next.js, Tailwind CSS and TypeScript and the backend is built with Node.js and Express. The service is hosted on Vercel and Render.com. The widget itself is built with Vanilla JS & CSS to ensure compatibility with any website.`,
     img: "/flexnote.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/nodejs.png", "/js.png"],
     link: "https://www.flexnote.io",
