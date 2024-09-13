@@ -15,3 +15,5 @@
 - **Testimonials**: Dynamische testimonials voor betere engagement.
 - **Work Experience**: Overzicht van professionele ervaring.
 - **Responsiveness**: Geschikt voor alle apparaten.
+
+Feel free to clone and modify the project to suit your needs.
