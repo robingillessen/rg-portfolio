@@ -121,7 +121,7 @@ const RecentProjects = () => {
       {currentProject && (
         <Dialog open={isOpen} onOpenChange={handleClose}>
           <DialogTrigger className="hidden">Open</DialogTrigger>
-          <DialogContent className="max-h-[80vh] overflow-y-auto">
+          <DialogContent className="max-h-[80vh] overflow-y-auto max-w-3xl">
             <DialogHeader>
               <DialogTitle className="text-2xl pb-4">
                 {currentProject.title}
@@ -155,18 +155,18 @@ const RecentProjects = () => {
                     ),
                     ul: ({ node, ...props }) => (
                       <ul
-                        className="list-disc list-inside mb-2 text-white-100"
+                        className="list-disc list-outside mb-4 pl-6 space-y-2 marker:text-greenish-500 marker:text-lg"
                         {...props}
                       />
                     ),
                     ol: ({ node, ...props }) => (
                       <ol
-                        className="list-decimal list-inside mb-2 text-white-100"
+                        className="list-decimal list-outside mb-4 pl-6 space-y-2 marker:text-greenish-500 marker:text-lg"
                         {...props}
                       />
                     ),
                     li: ({ node, ...props }) => (
-                      <li className="ml-4 mb-1" {...props} />
+                      <li className="mb-1 text-white-100" {...props} />
                     ),
                     a: ({ node, ...props }) => (
                       <a
@@ -190,9 +190,12 @@ const RecentProjects = () => {
                     ),
                     blockquote: ({ node, ...props }) => (
                       <blockquote
-                        className="border-l-4 border-greenish-500 pl-4 italic text-white-200 my-2"
+                        className="border-l-4 border-greenish-500 pl-4 italic text-white-200 my-4 py-2 bg-white/5 rounded"
                         {...props}
                       />
+                    ),
+                    hr: () => (
+                      <hr className="my-6 border-t border-greenish-700/40" />
                     ),
                     img: ({ node, ...props }) => (
                       <img

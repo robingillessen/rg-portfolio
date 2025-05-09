@@ -73,20 +73,31 @@ export const projects = [
   {
     id: 1,
     title: "Paloma Media",
-    des: `# Paloma Media
+    des: `
 
-## Paloma Media Webshop
+## Shopify Webshop
 
 ### Front Page
 ![Paloma Media Front Page](/paloma.png)
 
 ---
 
-- **Built from scratch** with a custom Shopify theme.
-- Implemented a **unique quotation flow** for tailored customer experiences, overcoming challenges such as complex data modeling and seamless integration with the Shopify API.
-- Focused on **modern UI/UX** and seamless design, ensuring a high-quality user experience.
-- Integrated **Cloudinary** for efficient image management and optimization, reducing page load times and improving overall performance.
-- Developed a **user-friendly backend** for easy quotation flow handling, streamlining the process for administrators and customers alike.
+Paloma Media is a custom Shopify webshop built from the ground up to address the unique needs of a media-focused business. The primary goal was to create a seamless, modern e-commerce experience that could handle both standard product sales and a bespoke quotation flow for tailored services.
+
+**Why:**
+- The client needed a flexible platform that could support both direct sales and complex, custom service requests.
+- Off-the-shelf Shopify themes were too restrictive for the desired user experience and business logic.
+
+**How:**
+- Designed and implemented a custom Shopify theme using Liquid, React, and TailwindCSS, ensuring pixel-perfect UI/UX and full control over the customer journey.
+- Architected a unique quotation flow, modeling complex data relationships and integrating deeply with the Shopify API to allow customers to request and manage custom quotes.
+- Integrated Cloudinary for image management, optimizing media delivery and reducing load times, which was critical for a visually rich site.
+- Developed a user-friendly backend interface for administrators to manage quotations and orders efficiently, reducing manual work and errors.
+
+**What:**
+- Delivered a high-performance, scalable webshop with a modern look and feel.
+- Achieved a seamless blend of e-commerce and service quotation, setting the client apart from competitors.
+- The project is ongoing, with continuous improvements based on user feedback and analytics.
 
 > _Currently in progress. Stay tuned for updates!_`,
     img: "/palomalogo.png",
@@ -97,7 +108,27 @@ export const projects = [
   {
     id: 2,
     title: "Toernooi.nl",
-    des: `**Toernooi.nl Planning Tool**\n\n- Developed for an international sports software organization.\n- Emphasized user experience and performance for complex data models.\n- Ensured scalability and maintainability of front-end logic.\n\n> [Visit Toernooi.nl](https://www.toernooi.nl)`,
+    des: `
+
+## Toernooi.nl Planning Tool
+
+Toernooi.nl is a leading platform for organizing and managing sports tournaments internationally. I was brought in to modernize and optimize the front-end, focusing on scalability, maintainability, and user experience for both organizers and participants.
+
+**Why:**
+- The existing platform was functional but suffered from performance bottlenecks and a dated user interface.
+- The client wanted to future-proof the application and make it easier to extend with new features.
+
+**How:**
+- Rebuilt the front-end using Next.js and TypeScript, introducing modular architecture and best practices for large-scale React applications.
+- Refactored complex data flows to improve performance and reliability, especially for real-time scheduling and results updates.
+- Collaborated closely with backend teams to ensure seamless API integration and data consistency.
+- Prioritized accessibility and responsive design, making the tool usable on any device.
+
+**What:**
+- Delivered a robust, maintainable codebase that supports rapid feature development.
+- Significantly improved load times and user satisfaction scores.
+- The platform now serves thousands of users during peak tournament periods with minimal downtime.
+`,
     img: "/toernooi.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/nodejs.png", "/js.png"],
     link: "https://www.toernooi.nl",
@@ -106,7 +137,27 @@ export const projects = [
   {
     id: 3,
     title: "Reliving",
-    des: `**Reliving Platform Enhancements**\n\n- Upgraded data tracking for comprehensive analytics.\n- Implemented multiple event-driven features.\n- Designed and built an improved product page.\n- Developed a new AI chatbot front end from scratch.\n\n> [Explore Reliving](https://www.reliving.nl)`,
+    des: `
+
+## Reliving Platform Enhancements
+
+Reliving is a fast-growing platform in the circular economy, focused on giving furniture and home goods a second life. My role was to enhance the platform's analytics, user engagement, and product experience through targeted feature development and technical improvements.
+
+**Why:**
+- The business needed deeper insights into user behavior to drive growth and retention.
+- There was a need to differentiate the product page experience and introduce innovative features like an AI chatbot.
+
+**How:**
+- Upgraded the analytics stack, implementing event-driven tracking and custom dashboards for actionable insights.
+- Designed and built a new product page with improved UI/UX, leveraging React and Sass for rapid iteration and maintainability.
+- Developed a custom AI chatbot front-end from scratch, integrating with backend AI services to provide real-time support and recommendations.
+- Worked closely with stakeholders to prioritize features that deliver measurable business value.
+
+**What:**
+- The platform now benefits from advanced analytics, enabling data-driven decision making.
+- The new product page and chatbot have increased user engagement and conversion rates.
+- Reliving continues to evolve rapidly, with a strong technical foundation for future growth.
+`,
     img: "/reliving.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.png", "/sass.png"],
     link: "https://www.reliving.nl",
@@ -115,7 +166,27 @@ export const projects = [
   {
     id: 4,
     title: "Y.Digital",
-    des: `**Y.Digital Government Dashboards**\n\n- Built frontends for two AI-powered government dashboards.\n- Delivered efficient, user-friendly solutions.\n- Focused on accessibility and performance.\n\n> [See Y.Digital](https://www.y.digital/)`,
+    des: `
+
+## Y.Digital Government Dashboards
+
+Y.Digital specializes in AI-powered solutions for government and enterprise clients. I was responsible for building the frontends for two complex government dashboards, with a strong focus on accessibility, performance, and maintainability.
+
+**Why:**
+- Government clients require robust, accessible, and secure solutions that can handle sensitive data and high user loads.
+- The dashboards needed to present complex analytics in a clear, actionable way for non-technical users.
+
+**How:**
+- Built the dashboards using Next.js and TypeScript, applying strict accessibility standards (WCAG) and performance optimizations.
+- Implemented modular, reusable components to speed up development and ensure consistency across projects.
+- Collaborated with data scientists and backend engineers to visualize large datasets efficiently and interactively.
+- Conducted code reviews and mentored junior developers to raise the overall code quality.
+
+**What:**
+- Delivered two high-impact dashboards that empower government stakeholders to make data-driven decisions.
+- Achieved high accessibility scores and fast load times, even with complex data visualizations.
+- The solutions are now used daily by multiple government agencies and continue to receive positive feedback.
+`,
     img: "/ydigital.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://www.y.digital/",
