@@ -40,7 +40,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Robin Gillessen
+          Copyright &copy; {new Date().getFullYear()} Robin Gillessen
         </p>
 
         <div className="flex items-center md:gap-3 gap-6 mt-2 md:mt-0">

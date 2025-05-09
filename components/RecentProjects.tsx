@@ -11,6 +11,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import ReactMarkdown from "react-markdown";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -22,6 +23,7 @@ interface Project {
   img: string;
   iconLists: string[];
   link: string;
+  showWebsite: boolean;
 }
 
 const RecentProjects = () => {
@@ -52,17 +54,27 @@ const RecentProjects = () => {
             onClick={() => handleClick(item)}
           >
             <PinContainer title="Click">
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] h-[32vw] min-h-[180px] max-h-[400px] lg:h-[30vh] mb-10 group shimmer-img">
+                {/* shimmer overlay altijd zichtbaar */}
+                <div className="shimmer-img__overlay rounded-3xl pointer-events-none" />
+                {/* donkere overlay met transition, boven alles behalve icons/tekst */}
+                <div className="absolute inset-0 bg-black/60 rounded-3xl opacity-80 group-hover:opacity-30 transition-opacity duration-300 pointer-events-none z-20" />
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  className="relative w-full h-full lg:overflow-hidden overflow-visible lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  {/* layover hover */}
+                  <img
+                    src="/bg.png"
+                    alt="bgimg"
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
                 </div>
+                {/* image zoom top altijd zichtbaar */}
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="z-10 absolute bottom-0 rounded-3xl w-full h-auto max-h-full object-cover"
                 />
               </div>
 
@@ -109,22 +121,100 @@ const RecentProjects = () => {
       {currentProject && (
         <Dialog open={isOpen} onOpenChange={handleClose}>
           <DialogTrigger className="hidden">Open</DialogTrigger>
-          <DialogContent>
+          <DialogContent className="max-h-[80vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="text-2xl pb-4">
                 {currentProject.title}
               </DialogTitle>
               <DialogDescription className="text-base whitespace-pre-wrap pb-8">
-                {currentProject.des}
+                <ReactMarkdown
+                  components={{
+                    h1: ({ node, ...props }) => (
+                      <h1
+                        className="text-2xl font-bold text-greenish-500 mt-4 mb-2"
+                        {...props}
+                      />
+                    ),
+                    h2: ({ node, ...props }) => (
+                      <h2
+                        className="text-xl font-semibold text-greenish-400 mt-4 mb-2"
+                        {...props}
+                      />
+                    ),
+                    h3: ({ node, ...props }) => (
+                      <h3
+                        className="text-lg font-semibold text-greenish-300 mt-4 mb-2"
+                        {...props}
+                      />
+                    ),
+                    p: ({ node, ...props }) => (
+                      <p
+                        className="mb-2 text-white-100 leading-relaxed"
+                        {...props}
+                      />
+                    ),
+                    ul: ({ node, ...props }) => (
+                      <ul
+                        className="list-disc list-inside mb-2 text-white-100"
+                        {...props}
+                      />
+                    ),
+                    ol: ({ node, ...props }) => (
+                      <ol
+                        className="list-decimal list-inside mb-2 text-white-100"
+                        {...props}
+                      />
+                    ),
+                    li: ({ node, ...props }) => (
+                      <li className="ml-4 mb-1" {...props} />
+                    ),
+                    a: ({ node, ...props }) => (
+                      <a
+                        className="text-greenish-500 underline hover:text-greenish-400 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        {...props}
+                      />
+                    ),
+                    code: ({ node, ...props }) => (
+                      <code
+                        className="bg-black/60 text-greenish-400 px-1 py-0.5 rounded text-sm font-mono"
+                        {...props}
+                      />
+                    ),
+                    pre: ({ node, ...props }) => (
+                      <pre
+                        className="bg-black/80 rounded p-3 overflow-x-auto my-2"
+                        {...props}
+                      />
+                    ),
+                    blockquote: ({ node, ...props }) => (
+                      <blockquote
+                        className="border-l-4 border-greenish-500 pl-4 italic text-white-200 my-2"
+                        {...props}
+                      />
+                    ),
+                    img: ({ node, ...props }) => (
+                      <img
+                        className="rounded-lg shadow-lg my-4 max-w-full h-auto"
+                        {...props}
+                      />
+                    ),
+                  }}
+                >
+                  {currentProject.des}
+                </ReactMarkdown>
               </DialogDescription>
-              <Link
-                href={currentProject.link}
-                className="text-greenish-500 mt-8 cursor-pointer font-bold"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View live website
-              </Link>
+              {currentProject.showWebsite && (
+                <Link
+                  href={currentProject.link}
+                  className="text-greenish-500 mt-8 cursor-pointer font-bold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View live website
+                </Link>
+              )}
             </DialogHeader>
           </DialogContent>
         </Dialog>

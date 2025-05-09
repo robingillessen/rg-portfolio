@@ -131,3 +131,35 @@
     --angle: 350deg;
   }
 }
+
+/* Shimmer effect voor afbeelding op mobiel */
+
+.shimmer-img {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-img__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  border-radius: 1.5rem; /* match rounded-3xl */
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer-img-move 2s infinite;
+  opacity: 1;
+}
+@keyframes shimmer-img-move {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

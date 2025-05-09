@@ -53,7 +53,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "NextJS", "Typescript"];
+  const leftLists = ["React.j", "Next.js", "Typescript", "Shopify"];
   const rightLists = ["HTML", "CSS", "Tailwind"];
 
   const [copied, setCopied] = useState(false);
@@ -194,20 +194,21 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-[#161A31] rounded-full"
+                btnClasses="rounded-full bg-transparent"
               />
               <div className="flex w-full items-center py-4">
                 <div className="h-[1px] bg-gray-500 w-full" />
                 <p className="px-4 text-white">or</p>
                 <div className="h-[1px] bg-gray-500 w-full" />
               </div>
-              <Link href="https://wa.me/31641244565">
+              <Link href="https://wa.me/31680227862">
                 <MagicButton
                   title={"Send me a WhatsApp"}
                   icon={<IoLogoWhatsapp />}
                   position="left"
-                  otherClasses="!bg-[#161A31]"
-                  btnClasses=" md:mt-0"
+                  otherClasses="!bg-[#161A31] rounded-full"
+                  btnClasses=" md:mt-0 rounded-full bg-transparent"
                 />
               </Link>
             </div>

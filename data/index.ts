@@ -18,7 +18,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Developing web apps since 2020",
+    title: "6+ years of experience",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -59,7 +59,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Start a project together?",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -72,41 +72,54 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Lay Design Studio",
-    des: `Created a branded website for a design studio using Next.js, TypeScript, SanityCMS and Tailwind CSS. The site features a modern design and smooth animations. The website is connected to a headless CMS for content management.`,
-    img: "/laydesign.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/sanity.png", "/fm.svg"],
-    link: "https://laydesignstudio.nl",
+    title: "Paloma Media",
+    des: `# Paloma Media
+
+## Paloma Media Webshop
+
+### Front Page
+![Paloma Media Front Page](/paloma.png)
+
+---
+
+- **Built from scratch** with a custom Shopify theme.
+- Implemented a **unique quotation flow** for tailored customer experiences, overcoming challenges such as complex data modeling and seamless integration with the Shopify API.
+- Focused on **modern UI/UX** and seamless design, ensuring a high-quality user experience.
+- Integrated **Cloudinary** for efficient image management and optimization, reducing page load times and improving overall performance.
+- Developed a **user-friendly backend** for easy quotation flow handling, streamlining the process for administrators and customers alike.
+
+> _Currently in progress. Stay tuned for updates!_`,
+    img: "/palomalogo.png",
+    iconLists: ["/shopify.png", "/tail.svg", "/cloud.svg", "/js.png"],
+    link: "Work in progress",
+    showWebsite: false,
   },
   {
     id: 2,
-    title: "Flexnote",
-    des: `Lightweight notification service for non-developer business owners. The admin is built with Next.js, Tailwind CSS and TypeScript and the backend is built with Node.js and Express. The service is hosted on Vercel and Render.com. The widget itself is built with Vanilla JS & CSS to ensure compatibility with any website.`,
-    img: "/flexnote.png",
+    title: "Toernooi.nl",
+    des: `**Toernooi.nl Planning Tool**\n\n- Developed for an international sports software organization.\n- Emphasized user experience and performance for complex data models.\n- Ensured scalability and maintainability of front-end logic.\n\n> [Visit Toernooi.nl](https://www.toernooi.nl)`,
+    img: "/toernooi.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/nodejs.png", "/js.png"],
-    link: "https://www.flexnote.io",
+    link: "https://www.toernooi.nl",
+    showWebsite: true,
   },
   {
     id: 3,
     title: "Reliving",
-    des: "Involved in the development of various upgrades and features. Improved the data tracking solution by making relevant data available throughout the application and implementing multiple events. Enhanced the user experience by building out the designs for an improved product page and developed the front end for the new AI chatbot feature from scratch.",
+    des: `**Reliving Platform Enhancements**\n\n- Upgraded data tracking for comprehensive analytics.\n- Implemented multiple event-driven features.\n- Designed and built an improved product page.\n- Developed a new AI chatbot front end from scratch.\n\n> [Explore Reliving](https://www.reliving.nl)`,
     img: "/reliving.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.png", "/sass.png"],
     link: "https://www.reliving.nl",
+    showWebsite: true,
   },
   {
     id: 4,
-    title: "Hulp met Huren",
-    des: "Created a platform for home-seekers in the Netherlands. The platform is built with Next.js, Tailwind CSS and TypeScript. The site features a modern design and smooth animations. The website is connected to a backend that utilizes a Python web scraper to fetch the latest listings from various sources. The site is hosted on Vercel.",
-    img: "/hmhscreen.png",
-    iconLists: [
-      "/next.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/nodejs.png",
-      "/cloud.svg",
-    ],
-    link: "https://hulpmethuren.nl",
+    title: "Y.Digital",
+    des: `**Y.Digital Government Dashboards**\n\n- Built frontends for two AI-powered government dashboards.\n- Delivered efficient, user-friendly solutions.\n- Focused on accessibility and performance.\n\n> [See Y.Digital](https://www.y.digital/)`,
+    img: "/ydigital.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    link: "https://www.y.digital/",
+    showWebsite: true,
   },
 ];
 
@@ -192,6 +205,6 @@ export const socialMedia = [
   {
     id: 2,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/robin-gillessen-2a225314b/",
+    link: "https://www.linkedin.com/in/robin-gillessen",
   },
 ];
