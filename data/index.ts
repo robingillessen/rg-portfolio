@@ -100,6 +100,8 @@ Paloma Media is a custom Shopify webshop built from the ground up to address the
 - The project is ongoing, with continuous improvements based on user feedback and analytics.
 
 > _Currently in progress. Stay tuned for updates!_`,
+    preview:
+      "Paloma Media is a custom Shopify webshop built from the ground up to address the unique needs of a media-focused business. The primary goal was to create a seamless, modern e-commerce experience that could handle both standard product sales and a bespoke quotation flow for tailored services.",
     img: "/palomalogo.png",
     iconLists: ["/shopify.png", "/tail.svg", "/cloud.svg", "/js.png"],
     link: "Work in progress",
@@ -129,6 +131,8 @@ Toernooi.nl is a leading platform for organizing and managing sports tournaments
 - Significantly improved load times and user satisfaction scores.
 - The platform now serves thousands of users during peak tournament periods with minimal downtime.
 `,
+    preview:
+      "Toernooi.nl is a leading platform for organizing and managing sports tournaments internationally. I was brought in to modernize and optimize the front-end, focusing on scalability, maintainability, and user experience for both organizers and participants.",
     img: "/toernooi.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/nodejs.png", "/js.png"],
     link: "https://www.toernooi.nl",
@@ -154,6 +158,8 @@ Reliving is a fast-growing platform in the circular economy, focused on giving f
 - Worked closely with stakeholders to prioritize features that deliver measurable business value.
 
 `,
+    preview:
+      "Reliving is a fast-growing platform in the circular economy, focused on giving furniture and home goods a second life. My role was to enhance the platform's analytics, user engagement, and product experience through targeted feature development and technical improvements.",
     img: "/reliving.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.png", "/sass.png"],
     link: "https://www.reliving.nl",
@@ -182,9 +188,42 @@ Y.Digital specializes in AI-powered solutions for government and enterprise clie
 - Achieved high accessibility scores and fast load times, even with complex data visualizations.
 
 `,
+    preview:
+      "Y.Digital specializes in AI-powered solutions for government and enterprise clients. I was responsible for building the frontends for two complex government dashboards, with a strong focus on accessibility, performance, and maintainability.",
     img: "/ydigital.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://www.y.digital/",
+    showWebsite: true,
+  },
+  {
+    id: 5,
+    title: "WoningNet",
+    des: `
+
+## WoningNet Platform
+
+WoningNet is a platform used by over 4 million users to search for social housing in the Netherlands. My role involved end-to-end frontend ownership, improving usability and performance while extending the data model to support new features.
+
+**Why:**
+- To provide a scalable, accessible platform that meets the housing needs of users across regions.
+
+**How:**
+- Maintained and extended the frontend architecture.
+- Collaborated weekly on UI/UX with design teams.
+- Integrated REST APIs with embedded logic.
+- Extended the complex data model to accommodate new housing partners.
+- Supported multiple SCRUM teams with knowledge sharing and onboarding.
+
+**What:**
+- Delivered stable, user-friendly updates to a live platform with high traffic.
+- Mentored new developers and aligned front-end vision across teams.
+
+`,
+    preview:
+      "WoningNet is a platform used by over 4 million users to search for social housing in the Netherlands. My role involved end-to-end frontend ownership, improving usability and performance while extending the data model to support new features.",
+    img: "/woningnet.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/api.svg"],
+    link: "https://www.woningnet.nl",
     showWebsite: true,
   },
 ];

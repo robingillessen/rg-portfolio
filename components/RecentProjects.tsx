@@ -89,7 +89,7 @@ const RecentProjects = () => {
                   margin: "1vh 0",
                 }}
               >
-                {item.des}
+                {item.preview}
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
