@@ -85,7 +85,7 @@ export const projects = [
 Paloma Media is a custom Shopify webshop built from the ground up to address the unique needs of a media-focused business. The primary goal was to create a seamless, modern e-commerce experience that could handle both standard product sales and a bespoke quotation flow for tailored services.
 
 **Why:**
-- The client needed a flexible platform that could support both direct sales and complex, custom service requests.
+- The client needed a flexible platform that could support custom service requests.
 - Off-the-shelf Shopify themes were too restrictive for the desired user experience and business logic.
 
 **How:**
@@ -153,10 +153,6 @@ Reliving is a fast-growing platform in the circular economy, focused on giving f
 - Developed a custom AI chatbot front-end from scratch, integrating with backend AI services to provide real-time support and recommendations.
 - Worked closely with stakeholders to prioritize features that deliver measurable business value.
 
-**What:**
-- The platform now benefits from advanced analytics, enabling data-driven decision making.
-- The new product page and chatbot have increased user engagement and conversion rates.
-- Reliving continues to evolve rapidly, with a strong technical foundation for future growth.
 `,
     img: "/reliving.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.png", "/sass.png"],
@@ -179,27 +175,17 @@ Y.Digital specializes in AI-powered solutions for government and enterprise clie
 **How:**
 - Built the dashboards using Next.js and TypeScript, applying strict accessibility standards (WCAG) and performance optimizations.
 - Implemented modular, reusable components to speed up development and ensure consistency across projects.
-- Collaborated with data scientists and backend engineers to visualize large datasets efficiently and interactively.
-- Conducted code reviews and mentored junior developers to raise the overall code quality.
+- Collaborated with backend engineers to visualize large datasets efficiently and interactively.
 
 **What:**
 - Delivered two high-impact dashboards that empower government stakeholders to make data-driven decisions.
 - Achieved high accessibility scores and fast load times, even with complex data visualizations.
-- The solutions are now used daily by multiple government agencies and continue to receive positive feedback.
+
 `,
     img: "/ydigital.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://www.y.digital/",
     showWebsite: true,
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Robin was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Robin's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Robin is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
   },
 ];
 
