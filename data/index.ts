@@ -9,7 +9,7 @@ export const gridItems = [
   {
     id: 1,
     title: "",
-    description: "",
+    description: "Elevate Your Online Identity",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
