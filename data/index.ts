@@ -145,7 +145,7 @@ Toernooi.nl is a leading platform for organizing and managing sports tournaments
 
 ## Reliving Platform Enhancements
 
-Reliving is a fast-growing platform in the circular economy, focused on giving furniture and home goods a second life. My role was to enhance the platform's analytics, user engagement, and product experience through targeted feature development and technical improvements.
+Reliving is a fast-growing platform in the circular economy, focused on giving furniture and home goods a second life. My role was to enhance the platform's analytics, user engagement, and product experience through targeted feature development and technical improvements, communicating with a Shopify backend.
 
 **Why:**
 - The business needed deeper insights into user behavior to drive growth and retention.
