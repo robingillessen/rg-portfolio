@@ -136,7 +136,7 @@ Toernooi.nl is a leading platform for organizing and managing sports tournaments
     img: "/toernooi.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/nodejs.png", "/js.png"],
     link: "https://www.toernooi.nl",
-    showWebsite: true,
+    showWebsite: false,
   },
   {
     id: 3,
