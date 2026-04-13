@@ -77,11 +77,6 @@ export const projects = [
 
 ## Shopify Plus E-commerce Development
 
-### Storefront
-![Fitwinkel Storefront](/fitwinkel.png)
-
----
-
 Fitwinkel is a high-traffic Shopify Plus store serving 100+ employees and thousands of customers. The goal was to translate complex business requirements into a polished, performant storefront while building the infrastructure to scale with the business.
 
 **Why:**
@@ -113,11 +108,6 @@ Fitwinkel is a high-traffic Shopify Plus store serving 100+ employees and thousa
     des: `
 
 ## Frontend Development & Design Systems
-
-### Application
-![Ampère Application](/ampere.jpeg)
-
----
 
 Ampère is a bol.com scale-up focused on sustainable parcel delivery across the Netherlands. My role covered front-end ownership across multiple internal and external applications, with a strong focus on scalability, developer experience, and cross-functional collaboration.
 
