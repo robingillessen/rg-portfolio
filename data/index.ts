@@ -72,6 +72,83 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "Fitwinkel",
+    des: `
+
+## Shopify Plus E-commerce Development
+
+### Storefront
+![Fitwinkel Storefront](/fitwinkel.png)
+
+---
+
+Fitwinkel is a high-traffic Shopify Plus store serving 100+ employees and thousands of customers. The goal was to translate complex business requirements into a polished, performant storefront while building the infrastructure to scale with the business.
+
+**Why:**
+- The business needed a flexible, maintainable front-end foundation capable of handling high traffic and evolving requirements.
+- Existing components lacked visual consistency and a coherent design system to build on.
+
+**How:**
+- Built custom UI components and polished animations using Liquid, JavaScript, and SCSS to elevate the storefront experience.
+- Architected client-side and server-side rendering strategies, including App Proxies, to balance performance with dynamic content needs.
+- Developed and maintained a design system ensuring visual consistency and scalable component architecture across the store.
+- Managed custom data layers with Metafields and Metaobjects, and configured advanced product filtering, admin workflows, and state management.
+- Set up A/B testing for conversion rate optimization (CRO) and implemented analytics tracking to inform data-driven product decisions.
+
+**What:**
+- Delivered a high-performance, accessible storefront aligned with brand standards and business goals.
+- Established a scalable component architecture and design system for long-term maintainability.
+- Enabled data-driven decision making through structured analytics and experimentation.
+`,
+    preview:
+      "Fitwinkel is a high-traffic Shopify Plus store where I translated complex business requirements into performant, accessible front-end solutions — building a custom design system, UI components, and CRO infrastructure from the ground up.",
+    img: "/fitwinkel.jpg",
+    iconLists: ["/shopify.png", "/sass.png", "/js.png"],
+    link: "https://fitwinkel.nl/",
+    showWebsite: true,
+  },
+  {
+    id: 2,
+    title: "Ampère (bol.com)",
+    des: `
+
+## Frontend Development & Design Systems
+
+### Application
+![Ampère Application](/ampere.jpeg)
+
+---
+
+Ampère is a bol.com scale-up focused on sustainable parcel delivery across the Netherlands. My role covered front-end ownership across multiple internal and external applications, with a strong focus on scalability, developer experience, and cross-functional collaboration.
+
+**Why:**
+- Multiple initiatives required a coherent front-end strategy with shared components and consistent patterns across teams.
+- The flagship Control Tower application needed an architectural overhaul to support operational growth.
+
+**How:**
+- Led the translation of UX/UI designs into scalable, high-performance React and Next.js applications, prioritizing both user experience and developer experience.
+- Designed, implemented, and maintained a custom design system, driving consistency, accessibility, and long-term maintainability across teams.
+- Led front-end development of Ampère Control Tower 2.0, including architectural redesign and modernization.
+- Built advanced map-based visualizations to support real-time operational insights.
+- Delivered complex front-end features such as rating logic for Track & Trace systems.
+- Actively reviewed code, enforced front-end best practices, and contributed to technical standards and architecture decisions.
+- Mentored front-end developers through code reviews, technical discussions, and knowledge sharing.
+- Worked closely with product, back-end, and data teams on data modeling, API contracts, and technical alignment.
+
+**What:**
+- Delivered a modernized Control Tower 2.0 with improved architecture and real-time operational dashboards.
+- Established a shared design system that improved consistency and development velocity across teams.
+- Improved rendering efficiency and load times through structured performance monitoring and optimization.
+`,
+    preview:
+      "At Ampère, a bol.com scale-up, I took ownership of front-end development across multiple initiatives — leading the redesign of Control Tower 2.0, building a custom design system, and delivering complex features including real-time map visualizations and Track & Trace logic.",
+    img: "/ampere.jpg",
+    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg"],
+    link: "https://amperebezorgt.nl/",
+    showWebsite: true,
+  },
+  {
+    id: 3,
     title: "Paloma Media",
     des: `
 
@@ -108,7 +185,7 @@ Paloma Media is a custom Shopify webshop built from the ground up to address the
     showWebsite: false,
   },
   {
-    id: 2,
+    id: 4,
     title: "Toernooi.nl",
     des: `
 
@@ -139,7 +216,7 @@ Toernooi.nl is a leading platform for organizing and managing sports tournaments
     showWebsite: false,
   },
   {
-    id: 3,
+    id: 5,
     title: "Reliving",
     des: `
 
@@ -166,7 +243,7 @@ Reliving is a fast-growing platform in the circular economy, focused on giving f
     showWebsite: true,
   },
   {
-    id: 4,
+    id: 6,
     title: "Y.Digital",
     des: `
 
@@ -196,7 +273,7 @@ Y.Digital specializes in AI-powered solutions for government and enterprise clie
     showWebsite: true,
   },
   {
-    id: 5,
+    id: 7,
     title: "WoningNet",
     des: `
 
