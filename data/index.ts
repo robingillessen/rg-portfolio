@@ -1,373 +1,522 @@
-export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  // { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
-];
+export type Locale = "nl" | "en";
 
-export const gridItems = [
-  {
-    id: 1,
-    title: "",
-    description: "Elevate Your Online Identity",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
+export const profile = {
+  name: "Robin Gillessen",
+  email: "robinlaurentius@gmail.com",
+  linkedin: "https://www.linkedin.com/in/robin-gillessen",
+  github: "https://github.com/R92G",
+};
+
+const sharedStack = {
+  nl: {
+    eyebrow: "Stack",
+    title: "Een stack voor snel, toegankelijk frontendwerk.",
+    intro:
+      "Gekozen voor snelle delivery, duidelijke overdracht en onderhoudbare UI.",
+    groups: [
+      {
+        label: "Core",
+        skills: ["React", "Next.js", "TypeScript", "JavaScript", "Node.js"],
+      },
+      {
+        label: "Interface",
+        skills: ["Tailwind CSS", "SCSS", "Design Systems", "Storybook", "Figma"],
+      },
+      {
+        label: "Quality",
+        skills: ["WCAG 2.2", "ARIA", "Core Web Vitals", "Vitest", "Playwright"],
+      },
+      {
+        label: "Commerce & Data",
+        skills: ["Liquid", "GraphQL", "REST", "Vercel"],
+      },
+    ],
   },
-  {
-    id: 2,
-    title: "6+ years of experience",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
+  en: {
+    eyebrow: "Stack",
+    title: "A stack for fast, accessible frontend work.",
+    intro:
+      "Chosen for quick delivery, clear handover and maintainable UI.",
+    groups: [
+      {
+        label: "Core",
+        skills: ["React", "Next.js", "TypeScript", "JavaScript", "Node.js"],
+      },
+      {
+        label: "Interface",
+        skills: ["Tailwind CSS", "SCSS", "Design Systems", "Storybook", "Figma"],
+      },
+      {
+        label: "Quality",
+        skills: ["WCAG 2.2", "ARIA", "Core Web Vitals", "Vitest", "Playwright"],
+      },
+      {
+        label: "Commerce & Data",
+        skills: ["Liquid", "GraphQL", "REST", "Vercel"],
+      },
+    ],
   },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "Favorite choices",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
+};
+
+export const portfolio = {
+  nl: {
+    nav: [
+      { label: "Profiel", href: "#profile" },
+      { label: "Werk", href: "#work" },
+      { label: "Stack", href: "#stack" },
+      { label: "Contact", href: "#contact" },
+    ],
+    languageSwitchLabel: "Switch to English",
+    skipLink: "Ga naar inhoud",
+    hero: {
+      eyebrow: "Senior Freelance React / Next.js Developer",
+      title: "Frontend delivery onder druk.",
+      intro:
+        "Ik breng React, Next.js en Shopify verbeteringen snel naar productie, zonder kwaliteit of toegankelijkheid te laten vallen.",
+      location: "Amsterdam / remote / hybride",
+      availability: "Beschikbaar voor senior frontend opdrachten",
+      primaryCta: "Plan een gesprek",
+      secondaryCta: "Bekijk cases",
+      proof: [
+        "6+ jaar frontend ervaring",
+        "React, Next.js, TypeScript",
+        "Performance, WCAG 2.2, Shopify",
+      ],
+      stats: [
+        { value: "8", label: "recente teams" },
+        { value: "WCAG", label: "2.2 implementatie" },
+        { value: "Shopify", label: "Plus storefronts" },
+      ],
+    },
+    profile: {
+      eyebrow: "Profiel",
+      title: "Senior frontend capaciteit zonder overdracht-chaos.",
+      body:
+        "Ik stap in bij productteams, agencies en e-commerce organisaties wanneer er veel gebouwd moet worden, de planning strak is en de frontend geen verzameling losse fixes mag worden. Mijn kracht zit in snel productiewaardig leveren, zonder toegankelijkheid, performance of onderhoudbaarheid op te offeren.",
+      highlights: [
+        "Figma naar productie met oog voor details die gebruikers merken.",
+        "Frontend architectuur die teamleden sneller laat doorbouwen.",
+        "Heldere communicatie met business owners, product, design en backend.",
+      ],
+    },
+    capabilities: [
+      {
+        icon: "rocket",
+        title: "Feature delivery",
+        text:
+          "Complexe React en Next.js features opleveren in korte cycli, inclusief API-integraties, states, formulieren en edge cases.",
+      },
+      {
+        icon: "commerce",
+        title: "E-commerce frontends",
+        text:
+          "Shopify Plus, Liquid, productfilters, comparison flows, metafields en productervaringen die begrijpelijk zijn voor shoppers.",
+      },
+      {
+        icon: "system",
+        title: "Design systems",
+        text:
+          "Herbruikbare componenten, tokens, documentatie en patronen die Figma en productie dichter bij elkaar houden.",
+      },
+      {
+        icon: "speed",
+        title: "Performance & accessibility",
+        text:
+          "Core Web Vitals, bundle size, runtime performance, keyboard navigatie, ARIA en WCAG 2.2 implementatie.",
+      },
+    ],
+    work: {
+      eyebrow: "Geselecteerd werk",
+      title: "Cases die snelheid, structuur en businesswaarde laten zien.",
+      intro:
+        "Geen productielinks of vage visuals. De cases tonen welk probleem is opgelost, wat er is gebouwd en waarom dat relevant was voor het team.",
+      outcomeLabel: "Resultaat",
+      scopeLabel: "Scope",
+      items: [
+        {
+          company: "Stroom Mee",
+          role: "Senior Freelance Frontend Developer",
+          period: "mei 2026 - heden",
+          type: "Product build",
+          outcome:
+            "Een Next.js applicatie vanaf nul met custom design system en preview workflows waarmee niet-technische teamleden sneller kunnen meebewegen.",
+          scope: [
+            "Component library en Figma-to-production workflow",
+            "LLM-gestuurde preview branches voor kortere feedbackloops",
+            "CI/CD en developer experience voor snelle iteraties",
+          ],
+          stack: ["Next.js", "React", "TypeScript", "Design Systems", "CI/CD"],
+        },
+        {
+          company: "Fitwinkel",
+          role: "Senior Freelance Shopify Developer",
+          period: "jan. 2026 - apr. 2026",
+          type: "E-commerce",
+          outcome:
+            "Een high-traffic Shopify Plus storefront met betere productnavigatie, filterlogica en contentstructuren voor een grote Nederlandse retailer.",
+          scope: [
+            "Custom Liquid, JavaScript en SCSS theme componenten",
+            "Numerieke filters, productvergelijking en subcategorie navigatie",
+            "Metafields en metaobjects voor dynamische content",
+          ],
+          stack: ["Liquid", "JavaScript", "TypeScript", "SCSS"],
+        },
+        {
+          company: "Pantyr",
+          role: "Freelance Frontend Developer - WCAG 2.2",
+          period: "okt. 2025 - apr. 2026",
+          type: "Accessibility",
+          outcome:
+            "React applicaties toegankelijker gemaakt voor software die door overheid en sociale veiligheidsorganisaties wordt gebruikt.",
+          scope: [
+            "WCAG 2.2 migratie over meerdere applicaties",
+            "Focus management, ARIA patronen en keyboard flows",
+            "Component audits en refactors voor inclusieve UX",
+          ],
+          stack: ["React", "TypeScript", "WCAG 2.2"],
+        },
+        {
+          company: "Ampère",
+          role: "Senior Freelance React / Next.js Developer",
+          period: "sep. 2025 - apr. 2026",
+          type: "Logistics SaaS",
+          outcome:
+            "Data-intensieve logistieke interfaces gebouwd met herbruikbare UI en duidelijke frontend architectuur voor operationele teams.",
+          scope: [
+            "React en Next.js features met TypeScript",
+            "Interne design-system componenten",
+            "REST API-integraties voor operationele dashboards",
+          ],
+          stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST"],
+        },
+        {
+          company: "Y.digital",
+          role: "Freelance Frontend Developer",
+          period: "feb. 2025 - sep. 2025",
+          type: "Agency delivery",
+          outcome:
+            "Enterprise webplatformen met robuuste formulieren, datatabellen en contentflows voor zakelijke gebruikers.",
+          scope: [
+            "Herbruikbare React componenten",
+            "GraphQL, REST en headless CMS integraties",
+            "Samenwerking met lead developers, design en product",
+          ],
+          stack: ["Next.js", "React", "TypeScript", "GraphQL", "Figma"],
+        },
+        {
+          company: "Tournament Software",
+          role: "Freelance Frontend Developer",
+          period: "nov. 2024 - sep. 2025",
+          type: "Realtime interfaces",
+          outcome:
+            "Tournament management en live results interfaces verbeterd voor organisatoren, spelers en federaties.",
+          scope: [
+            "TypeScript features voor draws, rankings en resultaten",
+            "Modernisering van UI componenten",
+            "UX verbetering voor data-heavy interfaces",
+          ],
+          stack: ["TypeScript", "React", "JavaScript", "UX", "Frontend Tooling"],
+        },
+        {
+          company: "WoningNet",
+          role: "Front-end Developer",
+          period: "mrt. 2022 - dec. 2024",
+          type: "Public platform",
+          outcome:
+            "Betrouwbare en toegankelijke workflows op een publiek platform voor sociale woningverdeling in Nederland.",
+          scope: [
+            "Formulieren, zoekflows en filterinterfaces",
+            "UX verbeteringen voor een brede doelgroep",
+            "Samenwerking met SCRUM teams en product owners",
+          ],
+          stack: ["JavaScript", "HTML", "CSS", "TypeScript", "Accessibility"],
+        },
+        {
+          company: "Reliving.nl",
+          role: "Freelance Front-end Developer",
+          period: "okt. 2023 - feb. 2024",
+          type: "Marketplace",
+          outcome:
+            "Productervaring, analytics en uploadflows verbeterd voor een Nederlandse marketplace voor tweedehands designmeubels.",
+          scope: [
+            "Product detail page met focus op Core Web Vitals",
+            "Herbruikbare business logic laag",
+            "Frontend voor AI-gestuurde chatbot en uploadflow",
+          ],
+          stack: ["Next.js", "React", "TypeScript", "Vercel", "Analytics"],
+        },
+      ],
+    },
+    stack: sharedStack.nl,
+    process: {
+      eyebrow: "Werkwijze",
+      title: "Snel leveren, zonder shortcuts die later pijn doen.",
+      steps: [
+        {
+          title: "Scherp maken",
+          text:
+            "Doel, deadline, risico's en afhankelijkheden helder voordat er code wordt geschreven.",
+        },
+        {
+          title: "Bouwen in slices",
+          text:
+            "Kleine reviewbare stappen met duidelijke UI states, edge cases en acceptatiepunten.",
+        },
+        {
+          title: "Productieklaar maken",
+          text:
+            "Performance, accessibility, responsive gedrag en overdraagbaarheid worden meegenomen voor release.",
+        },
+      ],
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Frontend deadline, Shopify verbetering of React refactor?",
+      intro:
+        "Stuur kort wat er speelt. Ik reageer met een praktische inschatting van aanpak, timing en eerste stappen.",
+      emailLabel: "Mail Robin",
+      linkedinLabel: "LinkedIn",
+      githubLabel: "GitHub",
+      mailSubject: "Frontend opdracht",
+      details: [
+        "React / Next.js feature delivery",
+        "Shopify Plus front-end",
+        "TypeScript migraties",
+        "Design systems",
+        "Performance audits",
+        "WCAG 2.2 implementatie",
+      ],
+    },
+    footer: "Senior Freelance Frontend Developer - React, Next.js, TypeScript",
   },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
+  en: {
+    nav: [
+      { label: "Profile", href: "#profile" },
+      { label: "Work", href: "#work" },
+      { label: "Stack", href: "#stack" },
+      { label: "Contact", href: "#contact" },
+    ],
+    languageSwitchLabel: "Schakel naar Nederlands",
+    skipLink: "Skip to content",
+    hero: {
+      eyebrow: "Senior Freelance React / Next.js Developer",
+      title: "Frontend delivery under pressure.",
+      intro:
+        "I ship React, Next.js and Shopify improvements fast, without dropping quality or accessibility.",
+      location: "Amsterdam / remote / hybrid",
+      availability: "Available for senior frontend engagements",
+      primaryCta: "Book a call",
+      secondaryCta: "View cases",
+      proof: [
+        "6+ years frontend experience",
+        "React, Next.js, TypeScript",
+        "Performance, WCAG 2.2, Shopify",
+      ],
+      stats: [
+        { value: "8", label: "recent teams" },
+        { value: "WCAG", label: "2.2 implementation" },
+        { value: "Shopify", label: "Plus storefronts" },
+      ],
+    },
+    profile: {
+      eyebrow: "Profile",
+      title: "Senior frontend capacity without handover chaos.",
+      body:
+        "I join product teams, agencies and e-commerce organizations when a lot needs to be shipped, the planning is tight and the frontend cannot become a pile of one-off fixes. My strength is delivering production-ready work quickly without sacrificing accessibility, performance or maintainability.",
+      highlights: [
+        "Figma to production with details users actually notice.",
+        "Frontend architecture that helps teams keep building faster.",
+        "Clear communication with business owners, product, design and backend.",
+      ],
+    },
+    capabilities: [
+      {
+        icon: "rocket",
+        title: "Feature delivery",
+        text:
+          "Complex React and Next.js features shipped in short cycles, including API integrations, states, forms and edge cases.",
+      },
+      {
+        icon: "commerce",
+        title: "E-commerce frontends",
+        text:
+          "Shopify Plus, Liquid, product filters, comparison flows, metafields and product experiences shoppers understand.",
+      },
+      {
+        icon: "system",
+        title: "Design systems",
+        text:
+          "Reusable components, tokens, documentation and patterns that keep Figma and production closer together.",
+      },
+      {
+        icon: "speed",
+        title: "Performance & accessibility",
+        text:
+          "Core Web Vitals, bundle size, runtime performance, keyboard navigation, ARIA and WCAG 2.2 implementation.",
+      },
+    ],
+    work: {
+      eyebrow: "Selected work",
+      title: "Cases that show speed, structure and business value.",
+      intro:
+        "No production links or vague visuals. The cases show the problem, what was built and why it mattered to the team.",
+      outcomeLabel: "Outcome",
+      scopeLabel: "Scope",
+      items: [
+        {
+          company: "Stroom Mee",
+          role: "Senior Freelance Frontend Developer",
+          period: "May 2026 - present",
+          type: "Product build",
+          outcome:
+            "A Next.js application built from the ground up with a custom design system and preview workflows that help non-technical teammates move faster.",
+          scope: [
+            "Component library and Figma-to-production workflow",
+            "LLM-powered preview branches for shorter feedback loops",
+            "CI/CD and developer experience for fast iteration",
+          ],
+          stack: ["Next.js", "React", "TypeScript", "Design Systems", "CI/CD"],
+        },
+        {
+          company: "Fitwinkel",
+          role: "Senior Freelance Shopify Developer",
+          period: "Jan 2026 - Apr 2026",
+          type: "E-commerce",
+          outcome:
+            "A high-traffic Shopify Plus storefront with better product navigation, filtering logic and content structures for a major Dutch retailer.",
+          scope: [
+            "Custom Liquid, JavaScript and SCSS theme components",
+            "Numeric filters, product comparison and subcategory navigation",
+            "Metafields and metaobjects for dynamic content",
+          ],
+          stack: ["Liquid", "JavaScript", "TypeScript", "SCSS"],
+        },
+        {
+          company: "Pantyr",
+          role: "Freelance Frontend Developer - WCAG 2.2",
+          period: "Oct 2025 - Apr 2026",
+          type: "Accessibility",
+          outcome:
+            "Improved accessibility across React applications used by Dutch government and social safety organizations.",
+          scope: [
+            "WCAG 2.2 migration across multiple applications",
+            "Focus management, ARIA patterns and keyboard flows",
+            "Component audits and refactors for inclusive UX",
+          ],
+          stack: ["React", "TypeScript", "WCAG 2.2"],
+        },
+        {
+          company: "Ampère",
+          role: "Senior Freelance React / Next.js Developer",
+          period: "Sep 2025 - Apr 2026",
+          type: "Logistics SaaS",
+          outcome:
+            "Data-heavy logistics interfaces built with reusable UI and clear frontend architecture for operational teams.",
+          scope: [
+            "React and Next.js features with TypeScript",
+            "Internal design-system components",
+            "REST API integrations for operational dashboards",
+          ],
+          stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST"],
+        },
+        {
+          company: "Y.digital",
+          role: "Freelance Frontend Developer",
+          period: "Feb 2025 - Sep 2025",
+          type: "Agency delivery",
+          outcome:
+            "Enterprise web platforms with robust forms, data tables and content flows for business users.",
+          scope: [
+            "Reusable React components",
+            "GraphQL, REST and headless CMS integrations",
+            "Collaboration with lead developers, design and product",
+          ],
+          stack: ["Next.js", "React", "TypeScript", "GraphQL", "Figma"],
+        },
+        {
+          company: "Tournament Software",
+          role: "Freelance Frontend Developer",
+          period: "Nov 2024 - Sep 2025",
+          type: "Realtime interfaces",
+          outcome:
+            "Improved tournament management and live results interfaces for organizers, players and federations.",
+          scope: [
+            "TypeScript features for draws, rankings and results",
+            "Modernized UI components",
+            "UX improvements for data-heavy interfaces",
+          ],
+          stack: ["TypeScript", "React", "JavaScript", "UX", "Frontend Tooling"],
+        },
+        {
+          company: "WoningNet",
+          role: "Front-end Developer",
+          period: "Mar 2022 - Dec 2024",
+          type: "Public platform",
+          outcome:
+            "Reliable and accessible workflows on a public social housing allocation platform in the Netherlands.",
+          scope: [
+            "Forms, search flows and filtering interfaces",
+            "UX improvements for a broad audience",
+            "Collaboration with SCRUM teams and product owners",
+          ],
+          stack: ["JavaScript", "HTML", "CSS", "TypeScript", "Accessibility"],
+        },
+        {
+          company: "Reliving.nl",
+          role: "Freelance Front-end Developer",
+          period: "Oct 2023 - Feb 2024",
+          type: "Marketplace",
+          outcome:
+            "Improved product experience, analytics and upload flows for a Dutch second-hand design furniture marketplace.",
+          scope: [
+            "Product detail page focused on Core Web Vitals",
+            "Reusable business logic layer",
+            "Frontend for an AI-powered chatbot and upload flow",
+          ],
+          stack: ["Next.js", "React", "TypeScript", "Vercel", "Analytics"],
+        },
+      ],
+    },
+    stack: sharedStack.en,
+    process: {
+      eyebrow: "Process",
+      title: "Ship fast without shortcuts that hurt later.",
+      steps: [
+        {
+          title: "Clarify",
+          text:
+            "Goal, deadline, risks and dependencies are made clear before code starts.",
+        },
+        {
+          title: "Build in slices",
+          text:
+            "Small reviewable steps with clear UI states, edge cases and acceptance points.",
+        },
+        {
+          title: "Production-ready",
+          text:
+            "Performance, accessibility, responsive behavior and handover are handled before release.",
+        },
+      ],
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Frontend deadline, Shopify improvement or React refactor?",
+      intro:
+        "Send a short note about what is going on. I will reply with a practical view on approach, timing and first steps.",
+      emailLabel: "Email Robin",
+      linkedinLabel: "LinkedIn",
+      githubLabel: "GitHub",
+      mailSubject: "Frontend engagement",
+      details: [
+        "React / Next.js feature delivery",
+        "Shopify Plus frontend",
+        "TypeScript migrations",
+        "Design systems",
+        "Performance audits",
+        "WCAG 2.2 implementation",
+      ],
+    },
+    footer: "Senior Freelance Frontend Developer - React, Next.js, TypeScript",
   },
-
-  {
-    id: 5,
-    title: "An e-commerce project for a client in the Netherlands.",
-    description: "Currently working on",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
-];
-
-export const projects = [
-  {
-    id: 1,
-    title: "Fitwinkel",
-    des: `
-
-## Shopify Plus E-commerce Development
-
-Fitwinkel is a high-traffic Shopify Plus store serving 100+ employees and thousands of customers. The goal was to translate complex business requirements into a polished, performant storefront while building the infrastructure to scale with the business.
-
-**Why:**
-- The business needed a flexible, maintainable front-end foundation capable of handling high traffic and evolving requirements.
-- Existing components lacked visual consistency and a coherent design system to build on.
-
-**How:**
-- Built custom UI components and polished animations using Liquid, JavaScript, and SCSS to elevate the storefront experience.
-- Architected client-side and server-side rendering strategies, including App Proxies, to balance performance with dynamic content needs.
-- Developed and maintained a design system ensuring visual consistency and scalable component architecture across the store.
-- Managed custom data layers with Metafields and Metaobjects, and configured advanced product filtering, admin workflows, and state management.
-- Set up A/B testing for conversion rate optimization (CRO) and implemented analytics tracking to inform data-driven product decisions.
-
-**What:**
-- Delivered a high-performance, accessible storefront aligned with brand standards and business goals.
-- Established a scalable component architecture and design system for long-term maintainability.
-- Enabled data-driven decision making through structured analytics and experimentation.
-`,
-    preview:
-      "Fitwinkel is a high-traffic Shopify Plus store where I translated complex business requirements into performant, accessible front-end solutions — building a custom design system, UI components, and CRO infrastructure from the ground up.",
-    img: "/fitwinkel.jpg",
-    iconLists: ["/shopify.png", "/sass.png", "/js.png"],
-    link: "https://fitwinkel.nl/",
-    showWebsite: true,
-  },
-  {
-    id: 2,
-    title: "Ampère (bol.com)",
-    des: `
-
-## Frontend Development & Design Systems
-
-Ampère is a bol.com scale-up focused on sustainable parcel delivery across the Netherlands. My role covered front-end ownership across multiple internal and external applications, with a strong focus on scalability, developer experience, and cross-functional collaboration.
-
-**Why:**
-- Multiple initiatives required a coherent front-end strategy with shared components and consistent patterns across teams.
-- The flagship Control Tower application needed an architectural overhaul to support operational growth.
-
-**How:**
-- Led the translation of UX/UI designs into scalable, high-performance React and Next.js applications, prioritizing both user experience and developer experience.
-- Designed, implemented, and maintained a custom design system, driving consistency, accessibility, and long-term maintainability across teams.
-- Led front-end development of Ampère Control Tower 2.0, including architectural redesign and modernization.
-- Built advanced map-based visualizations to support real-time operational insights.
-- Delivered complex front-end features such as rating logic for Track & Trace systems.
-- Actively reviewed code, enforced front-end best practices, and contributed to technical standards and architecture decisions.
-- Mentored front-end developers through code reviews, technical discussions, and knowledge sharing.
-- Worked closely with product, back-end, and data teams on data modeling, API contracts, and technical alignment.
-
-**What:**
-- Delivered a modernized Control Tower 2.0 with improved architecture and real-time operational dashboards.
-- Established a shared design system that improved consistency and development velocity across teams.
-- Improved rendering efficiency and load times through structured performance monitoring and optimization.
-`,
-    preview:
-      "At Ampère, a bol.com scale-up, I took ownership of front-end development across multiple initiatives — leading the redesign of Control Tower 2.0, building a custom design system, and delivering complex features including real-time map visualizations and Track & Trace logic.",
-    img: "/ampere.jpg",
-    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg"],
-    link: "https://amperebezorgt.nl/",
-    showWebsite: true,
-  },
-  {
-    id: 3,
-    title: "Paloma Media",
-    des: `
-
-## Shopify Webshop
-
-### Front Page
-![Paloma Media Front Page](/paloma.png)
-
----
-
-Paloma Media is a custom Shopify webshop built from the ground up to address the unique needs of a media-focused business. The primary goal was to create a seamless, modern e-commerce experience that could handle both standard product sales and a bespoke quotation flow for tailored services.
-
-**Why:**
-- The client needed a flexible platform that could support custom service requests.
-- Off-the-shelf Shopify themes were too restrictive for the desired user experience and business logic.
-
-**How:**
-- Designed and implemented a custom Shopify theme using Liquid, React, and TailwindCSS, ensuring pixel-perfect UI/UX and full control over the customer journey.
-- Architected a unique quotation flow, modeling complex data relationships and integrating deeply with the Shopify API to allow customers to request and manage custom quotes.
-- Integrated Cloudinary for image management, optimizing media delivery and reducing load times, which was critical for a visually rich site.
-- Developed a user-friendly backend interface for administrators to manage quotations and orders efficiently, reducing manual work and errors.
-
-**What:**
-- Delivered a high-performance, scalable webshop with a modern look and feel.
-- Achieved a seamless blend of e-commerce and service quotation, setting the client apart from competitors.
-- The project is ongoing, with continuous improvements based on user feedback and analytics.
-
-> _Currently in progress. Stay tuned for updates!_`,
-    preview:
-      "Paloma Media is a custom Shopify webshop built from the ground up to address the unique needs of a media-focused business. The primary goal was to create a seamless, modern e-commerce experience that could handle both standard product sales and a bespoke quotation flow for tailored services.",
-    img: "/palomalogo.png",
-    iconLists: ["/shopify.png", "/tail.svg", "/cloud.svg", "/js.png"],
-    link: "Work in progress",
-    showWebsite: false,
-  },
-  {
-    id: 4,
-    title: "Toernooi.nl",
-    des: `
-
-## Toernooi.nl Planning Tool
-
-Toernooi.nl is a leading platform for organizing and managing sports tournaments internationally. I was brought in to modernize and optimize the front-end, focusing on scalability, maintainability, and user experience for both organizers and participants.
-
-**Why:**
-- The existing platform was functional but suffered from performance bottlenecks and a dated user interface.
-- The client wanted to future-proof the application and make it easier to extend with new features.
-
-**How:**
-- Rebuilt the front-end using Next.js and TypeScript, introducing modular architecture and best practices for large-scale React applications.
-- Refactored complex data flows to improve performance and reliability, especially for real-time scheduling and results updates.
-- Collaborated closely with backend teams to ensure seamless API integration and data consistency.
-- Prioritized accessibility and responsive design, making the tool usable on any device.
-
-**What:**
-- Delivered a robust, maintainable codebase that supports rapid feature development.
-- Significantly improved load times and user satisfaction scores.
-- The platform now serves thousands of users during peak tournament periods with minimal downtime.
-`,
-    preview:
-      "Toernooi.nl is a leading platform for organizing and managing sports tournaments internationally. I was brought in to modernize and optimize the front-end, focusing on scalability, maintainability, and user experience for both organizers and participants.",
-    img: "/toernooi.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/nodejs.png", "/js.png"],
-    link: "https://www.toernooi.nl",
-    showWebsite: false,
-  },
-  {
-    id: 5,
-    title: "Reliving",
-    des: `
-
-## Reliving Platform Enhancements
-
-Reliving is a fast-growing platform in the circular economy, focused on giving furniture and home goods a second life. My role was to enhance the platform's analytics, user engagement, and product experience through targeted feature development and technical improvements, communicating with a Shopify backend.
-
-**Why:**
-- The business needed deeper insights into user behavior to drive growth and retention.
-- There was a need to differentiate the product page experience and introduce innovative features like an AI chatbot.
-
-**How:**
-- Upgraded the analytics stack, implementing event-driven tracking and custom dashboards for actionable insights.
-- Designed and built a new product page with improved UI/UX, leveraging React and Sass for rapid iteration and maintainability.
-- Developed a custom AI chatbot front-end from scratch, integrating with backend AI services to provide real-time support and recommendations.
-- Worked closely with stakeholders to prioritize features that deliver measurable business value.
-
-`,
-    preview:
-      "Reliving is a fast-growing platform in the circular economy, focused on giving furniture and home goods a second life. My role was to enhance the platform's analytics, user engagement, and product experience through targeted feature development and technical improvements.",
-    img: "/reliving.png",
-    iconLists: ["/re.svg", "/tail.svg", "/js.png", "/sass.png"],
-    link: "https://www.reliving.nl",
-    showWebsite: true,
-  },
-  {
-    id: 6,
-    title: "Y.Digital",
-    des: `
-
-## Y.Digital Government Dashboards
-
-Y.Digital specializes in AI-powered solutions for government and enterprise clients. I was responsible for building the frontends for two complex government dashboards, with a strong focus on accessibility, performance, and maintainability.
-
-**Why:**
-- Government clients require robust, accessible, and secure solutions that can handle sensitive data and high user loads.
-- The dashboards needed to present complex analytics in a clear, actionable way for non-technical users.
-
-**How:**
-- Built the dashboards using Next.js and TypeScript, applying strict accessibility standards (WCAG) and performance optimizations.
-- Implemented modular, reusable components to speed up development and ensure consistency across projects.
-- Collaborated with backend engineers to visualize large datasets efficiently and interactively.
-
-**What:**
-- Delivered two high-impact dashboards that empower government stakeholders to make data-driven decisions.
-- Achieved high accessibility scores and fast load times, even with complex data visualizations.
-
-`,
-    preview:
-      "Y.Digital specializes in AI-powered solutions for government and enterprise clients. I was responsible for building the frontends for two complex government dashboards, with a strong focus on accessibility, performance, and maintainability.",
-    img: "/ydigital.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://www.y.digital/",
-    showWebsite: true,
-  },
-  {
-    id: 7,
-    title: "WoningNet",
-    des: `
-
-## WoningNet Platform
-
-WoningNet is a platform used by over 4 million users to search for social housing in the Netherlands. My role involved end-to-end frontend ownership, improving usability and performance while extending the data model to support new features.
-
-**Why:**
-- To provide a scalable, accessible platform that meets the housing needs of users across regions.
-
-**How:**
-- Maintained and extended the frontend architecture.
-- Collaborated weekly on UI/UX with design teams.
-- Integrated REST APIs with embedded logic.
-- Extended the complex data model to accommodate new housing partners.
-- Supported multiple SCRUM teams with knowledge sharing and onboarding.
-
-**What:**
-- Delivered stable, user-friendly updates to a live platform with high traffic.
-- Mentored new developers and aligned front-end vision across teams.
-
-`,
-    preview:
-      "WoningNet is a platform used by over 4 million users to search for social housing in the Netherlands. My role involved end-to-end frontend ownership, improving usability and performance while extending the data model to support new features.",
-    img: "/woningnet.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/api.svg"],
-    link: "https://www.woningnet.nl",
-    showWebsite: true,
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Developer",
-    desc: "Assisting in the development of a web-based platform using Next.js / React.js",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "CRO Developer",
-    desc: "Let's take a look at the data and see what we can improve!",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Shopify web developer",
-    desc: "Need help to build a custom Shopify theme? I'm here to help!",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Tech Consultant",
-    desc: "Chosing a tech stack or modelling data can be hard, let me help you with that!",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
-
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-    link: "https://github.com/R92G",
-  },
-  {
-    id: 2,
-    img: "/link.svg",
-    link: "https://www.linkedin.com/in/robin-gillessen",
-  },
-];
+} as const;
