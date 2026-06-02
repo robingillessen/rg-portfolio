@@ -4,19 +4,32 @@ import {
   ArrowRight,
   Check,
   Code2,
+  Copy,
   ExternalLink,
   Gauge,
   Layers3,
-  Mail,
   Rocket,
   ShoppingBag,
   Sparkles,
 } from "lucide-react";
 import Image from "next/image";
-import type { CSSProperties } from "react";
+import type { CSSProperties, SVGProps } from "react";
 import { useEffect, useMemo, useState } from "react";
 
 import { Locale, portfolio, profile } from "@/data";
+
+function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.4-8.24 8.4Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z" />
+    </svg>
+  );
+}
 
 const capabilityIcons = {
   rocket: Rocket,
@@ -97,11 +110,22 @@ function SkillBadge({
 
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("nl");
+  const [copied, setCopied] = useState(false);
   const t = portfolio[locale];
   const nextLocale: Locale = locale === "nl" ? "en" : "nl";
-  const mailHref = `mailto:${profile.email}?subject=${encodeURIComponent(
-    t.contact.mailSubject
+  const whatsappHref = `https://wa.me/31680229628?text=${encodeURIComponent(
+    t.contact.waMessage
   )}`;
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
   const allSkills = useMemo(
     () => t.stack.groups.flatMap((group) => group.skills),
     [t.stack.groups]
@@ -192,11 +216,13 @@ export default function Home() {
 
           <div className="flex items-center gap-2">
             <a
-              href={mailHref}
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
               aria-label={t.hero.primaryCta}
               className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand text-ink transition hover:-translate-y-0.5 hover:bg-brand-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:hidden"
             >
-              <Mail className="h-4 w-4" aria-hidden="true" />
+              <WhatsAppIcon className="h-4 w-4" />
             </a>
             <button
               type="button"
@@ -210,10 +236,12 @@ export default function Home() {
               {nextLocale.toUpperCase()}
             </button>
             <a
-              href={mailHref}
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
               className="hidden h-10 items-center gap-2 rounded-full bg-brand px-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-brand-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:inline-flex"
             >
-              <Mail className="h-4 w-4" aria-hidden="true" />
+              <WhatsAppIcon className="h-4 w-4" />
               {t.hero.primaryCta}
             </a>
           </div>
@@ -236,8 +264,13 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href={mailHref} className="button-primary group">
-                  <Mail className="h-4 w-4" aria-hidden="true" />
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-primary group"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
                   {t.hero.primaryCta}
                   <ArrowRight
                     className="h-4 w-4 transition group-hover:translate-x-1"
@@ -267,28 +300,83 @@ export default function Home() {
               <div className="release-field">
                 <div className="release-orb release-orb-a" />
                 <div className="release-orb release-orb-b" />
-                <div className="release-line release-line-primary" />
-                <div className="release-line release-line-secondary" />
-                <div className="release-line release-line-tertiary" />
+
+                <svg
+                  className="release-connectors"
+                  viewBox="0 0 360 512"
+                  preserveAspectRatio="xMidYMid meet"
+                  fill="none"
+                >
+                  <defs>
+                    <linearGradient id="conn-gradient" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="var(--brand-dark)" stopOpacity="0.15" />
+                      <stop offset="50%" stopColor="var(--brand)" stopOpacity="0.85" />
+                      <stop offset="100%" stopColor="var(--brand-dark)" stopOpacity="0.15" />
+                    </linearGradient>
+                  </defs>
+
+                  {/* Requirement -> Build */}
+                  <path id="conn-1" d="M 95 120 C 175 150, 215 200, 275 255" />
+                  {/* Build -> Ship */}
+                  <path id="conn-2" d="M 275 255 C 215 315, 195 355, 135 400" />
+
+                  <path
+                    className="connector-base"
+                    d="M 95 120 C 175 150, 215 200, 275 255"
+                  />
+                  <path
+                    className="connector-base"
+                    d="M 275 255 C 215 315, 195 355, 135 400"
+                  />
+
+                  <path
+                    className="connector-flow"
+                    d="M 95 120 C 175 150, 215 200, 275 255"
+                  />
+                  <path
+                    className="connector-flow connector-flow-delayed"
+                    d="M 275 255 C 215 315, 195 355, 135 400"
+                  />
+
+                  <circle className="connector-dot" r="5">
+                    <animateMotion
+                      dur="3.6s"
+                      repeatCount="indefinite"
+                      keyPoints="0;1"
+                      keyTimes="0;1"
+                      calcMode="linear"
+                    >
+                      <mpath href="#conn-1" />
+                    </animateMotion>
+                  </circle>
+                  <circle className="connector-dot" r="5">
+                    <animateMotion
+                      dur="3.6s"
+                      begin="1.4s"
+                      repeatCount="indefinite"
+                      keyPoints="0;1"
+                      keyTimes="0;1"
+                      calcMode="linear"
+                    >
+                      <mpath href="#conn-2" />
+                    </animateMotion>
+                  </circle>
+                </svg>
 
                 {[
-                  ["ship", "01"],
-                  ["measure", "02"],
-                  ["scale", "03"],
-                ].map(([label, count], index) => (
+                  ["requirement", "01", "Requirement"],
+                  ["build", "02", "Build"],
+                  ["ship", "03", "Ship"],
+                ].map(([key, count, label], index) => (
                   <div
-                    key={label}
-                    className={`release-node release-node-${label}`}
+                    key={key}
+                    className={`release-node release-node-${key}`}
                     style={{ "--node-index": index } as CSSProperties}
                   >
                     <i>{count}</i>
                     <span>{label}</span>
                   </div>
                 ))}
-
-                <div className="release-spark release-spark-a" />
-                <div className="release-spark release-spark-b" />
-                <div className="release-spark release-spark-c" />
               </div>
             </div>
           </div>
@@ -457,15 +545,28 @@ export default function Home() {
               <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
                 {t.contact.intro}
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href={mailHref} className="button-light group">
-                  <Mail className="h-4 w-4" aria-hidden="true" />
-                  {t.contact.emailLabel}
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-light group"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  {t.contact.whatsappLabel}
                   <ArrowRight
                     className="h-4 w-4 transition group-hover:translate-x-1"
                     aria-hidden="true"
                   />
                 </a>
+                <button type="button" onClick={copyEmail} className="button-dark">
+                  {copied ? (
+                    <Check className="h-4 w-4" aria-hidden="true" />
+                  ) : (
+                    <Copy className="h-4 w-4" aria-hidden="true" />
+                  )}
+                  {copied ? t.contact.copiedLabel : t.contact.copyEmailLabel}
+                </button>
                 <a href={profile.linkedin} target="_blank" rel="noreferrer" className="button-dark">
                   <ExternalLink className="h-4 w-4" aria-hidden="true" />
                   {t.contact.linkedinLabel}

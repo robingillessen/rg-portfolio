@@ -293,45 +293,39 @@
   width: 10rem;
 }
 
-.release-line {
-  background:
-    linear-gradient(90deg, transparent, rgba(0, 125, 102, 0.16), rgba(0, 242, 189, 0.7), rgba(0, 125, 102, 0.16), transparent);
-  border-radius: 999px;
-  height: 2px;
-  overflow: hidden;
+.release-connectors {
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
   position: absolute;
-  transform-origin: left center;
+  width: 100%;
 }
 
-.release-line::after {
-  animation: line-shimmer 3.4s ease-in-out infinite;
-  background: linear-gradient(90deg, transparent, #ffffff, var(--brand-soft), transparent);
-  content: "";
-  inset: -1px 0;
-  opacity: 0.78;
-  position: absolute;
-  transform: translateX(-120%);
+.connector-base {
+  fill: none;
+  stroke: rgba(0, 125, 102, 0.18);
+  stroke-linecap: round;
+  stroke-width: 2;
 }
 
-.release-line-primary {
-  left: 5.5rem;
-  top: 10.5rem;
-  transform: rotate(-10deg);
-  width: min(27rem, 74vw);
+.connector-flow {
+  fill: none;
+  stroke: url(#conn-gradient);
+  stroke-dasharray: 26 150;
+  stroke-linecap: round;
+  stroke-width: 2.4;
+  animation: connector-dash 3.6s linear infinite;
 }
 
-.release-line-secondary {
-  left: 8rem;
-  top: 17.1rem;
-  transform: rotate(8deg);
-  width: min(24rem, 68vw);
+.connector-flow-delayed {
+  animation-delay: -1.4s;
 }
 
-.release-line-tertiary {
-  left: 3.8rem;
-  top: 23.8rem;
-  transform: rotate(-5deg);
-  width: min(30rem, 78vw);
+.connector-dot {
+  fill: var(--brand);
+  filter: drop-shadow(0 0 6px rgba(0, 242, 189, 0.65));
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 2;
 }
 
 .release-node {
@@ -339,6 +333,7 @@
   align-items: center;
   animation: node-float 6.4s ease-in-out infinite;
   animation-delay: calc(var(--node-index) * -780ms);
+  translate: -50% -50%;
   backdrop-filter: blur(18px);
   background:
     radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.98), transparent 1.15rem),
@@ -379,52 +374,21 @@
   text-transform: uppercase;
 }
 
-.release-node-ship {
-  left: 2.4rem;
-  top: 6.3rem;
+.release-node-requirement {
+  left: 26.4%;
+  top: 23.4%;
 }
 
-.release-node-measure {
-  right: 1.2rem;
-  top: 14.2rem;
+.release-node-build {
+  left: 76.4%;
+  top: 49.8%;
   --parallax-y: calc(var(--scroll-progress) * -68px);
 }
 
-.release-node-scale {
-  left: 5rem;
-  top: 22.4rem;
+.release-node-ship {
+  left: 37.5%;
+  top: 78.1%;
   --parallax-y: calc(var(--scroll-progress) * 42px);
-}
-
-.release-spark {
-  animation: connector-pulse 4.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-  background: var(--brand);
-  border: 4px solid rgba(255, 255, 255, 0.72);
-  border-radius: 999px;
-  box-shadow:
-    0 0 0 8px rgba(0, 242, 189, 0.11),
-    0 0 34px rgba(0, 242, 189, 0.38);
-  height: 1.1rem;
-  position: absolute;
-  width: 1.1rem;
-}
-
-.release-spark-a {
-  animation-delay: 0ms;
-  left: 17.8rem;
-  top: 9.8rem;
-}
-
-.release-spark-b {
-  animation-delay: 680ms;
-  left: 22rem;
-  top: 16.4rem;
-}
-
-.release-spark-c {
-  animation-delay: 1360ms;
-  left: 14.2rem;
-  top: 23.2rem;
 }
 
 .stat-strip {
@@ -1014,13 +978,12 @@
   }
 }
 
-@keyframes line-shimmer {
-  0%,
-  54% {
-    transform: translateX(-120%);
+@keyframes connector-dash {
+  from {
+    stroke-dashoffset: 176;
   }
-  100% {
-    transform: translateX(120%);
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
@@ -1031,18 +994,6 @@
   }
   48% {
     transform: translate3d(0, calc(var(--parallax-y) - 6px), 0);
-  }
-}
-
-@keyframes connector-pulse {
-  0%,
-  100% {
-    opacity: 0.38;
-    transform: scale(0.82);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.08);
   }
 }
 
@@ -1138,56 +1089,8 @@
     width: 8rem;
   }
 
-  .release-line-primary {
-    left: 2rem;
-    top: 8.4rem;
-    width: 19rem;
-  }
-
-  .release-line-secondary {
-    left: 2.2rem;
-    top: 16.1rem;
-    width: 18rem;
-  }
-
-  .release-line-tertiary {
-    left: 1.5rem;
-    top: 23rem;
-    width: 19rem;
-  }
-
   .release-node {
-    min-width: 10.8rem;
-  }
-
-  .release-node-ship {
-    left: 0;
-    top: 4.2rem;
-  }
-
-  .release-node-measure {
-    right: 0;
-    top: 13.1rem;
-  }
-
-  .release-node-scale {
-    left: 1.2rem;
-    top: 21.8rem;
-  }
-
-  .release-spark-a {
-    left: 14rem;
-    top: 7.8rem;
-  }
-
-  .release-spark-b {
-    left: 17rem;
-    top: 15.5rem;
-  }
-
-  .release-spark-c {
-    left: 9.8rem;
-    top: 22.3rem;
+    min-width: 9.6rem;
   }
 }
 
@@ -1208,9 +1111,7 @@
   .release-visual,
   .release-field::before,
   .release-orb,
-  .release-line::after,
   .release-node,
-  .release-spark,
   .stack-section::before,
   .stack-section::after,
   .hero-section::after {

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Robin Gillessen",
   },
   description:
-    "Senior freelance React, Next.js en TypeScript developer voor product- en e-commerce teams die frontendverbeteringen binnen strakke deadlines naar productie willen brengen.",
+    "Ik help product- en e-commerce teams features in dagen shippen in plaats van weken — zonder in te leveren op UX, stabiliteit of onderhoudbaarheid. Senior freelance React, Next.js en Shopify developer.",
   keywords: [
     "freelance frontend developer",
     "React developer",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Robin Gillessen | Senior Freelance Frontend Developer",
     description:
-      "React, Next.js, TypeScript en Shopify front-end development voor teams die snelheid, kwaliteit en een rustige samenwerking nodig hebben.",
+      "Features in dagen live in plaats van weken — complexe frontendflows, heldere componentstructuur en bouwpatronen, zonder in te leveren op UX, stabiliteit of onderhoudbaarheid.",
     locale: "nl_NL",
     type: "website",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Robin Gillessen | Senior Freelance Frontend Developer",
     description:
-      "Senior freelance React, Next.js en TypeScript developer voor product- en e-commerce teams.",
+      "Features in dagen shippen in plaats van weken — zonder in te leveren op UX, stabiliteit of onderhoudbaarheid.",
     images: ["/rg-logo.png"],
   },
   icons: {

@@ -4,7 +4,7 @@ export const profile = {
   name: "Robin Gillessen",
   email: "robinlaurentius@gmail.com",
   linkedin: "https://www.linkedin.com/in/robin-gillessen",
-  github: "https://github.com/R92G",
+  github: "https://github.com/robingillessen",
 };
 
 const sharedStack = {
@@ -70,17 +70,17 @@ export const portfolio = {
     skipLink: "Ga naar inhoud",
     hero: {
       eyebrow: "Senior Freelance React / Next.js Developer",
-      title: "Frontend delivery onder druk.",
+      title: "Features live in dagen, niet weken.",
       intro:
-        "Ik breng React, Next.js en Shopify verbeteringen snel naar productie, zonder kwaliteit of toegankelijkheid te laten vallen.",
+        "Ik help product- en e-commerce teams complexe frontend sneller shippen — zonder dat snelheid ten koste gaat van UX, stabiliteit of onderhoudbaarheid.",
       location: "Amsterdam / remote / hybride",
       availability: "Beschikbaar voor senior frontend opdrachten",
       primaryCta: "Plan een gesprek",
       secondaryCta: "Bekijk cases",
       proof: [
-        "6+ jaar frontend ervaring",
-        "React, Next.js, TypeScript",
-        "Performance, WCAG 2.2, Shopify",
+        "Complexe frontendflows & componentstructuur",
+        "Duidelijke bouwpatronen, blijft onderhoudbaar",
+        "React, Next.js, TypeScript, Shopify",
       ],
       stats: [
         { value: "8", label: "recente teams" },
@@ -90,12 +90,12 @@ export const portfolio = {
     },
     profile: {
       eyebrow: "Profiel",
-      title: "Senior frontend capaciteit zonder overdracht-chaos.",
+      title: "Snelheid die UX, stabiliteit en onderhoud niet opoffert.",
       body:
-        "Ik stap in bij productteams, agencies en e-commerce organisaties wanneer er veel gebouwd moet worden, de planning strak is en de frontend geen verzameling losse fixes mag worden. Mijn kracht zit in snel productiewaardig leveren, zonder toegankelijkheid, performance of onderhoudbaarheid op te offeren.",
+        "Ik stap in bij product- en e-commerce teams wanneer er veel gebouwd moet worden en de planning strak is. Ik bouw complexe frontendflows, heldere componentstructuur en duidelijke bouwpatronen, en zorg voor een logische vertaalslag van business requirements naar techniek. Zo gaan features in dagen live in plaats van weken, en blijft de frontend onderhoudbaar.",
       highlights: [
-        "Figma naar productie met oog voor details die gebruikers merken.",
-        "Frontend architectuur die teamleden sneller laat doorbouwen.",
+        "Complexe flows en componentstructuur die je team sneller laat doorbouwen.",
+        "Logische vertaalslag van business requirements naar werkende techniek.",
         "Heldere communicatie met business owners, product, design en backend.",
       ],
     },
@@ -104,7 +104,7 @@ export const portfolio = {
         icon: "rocket",
         title: "Feature delivery",
         text:
-          "Complexe React en Next.js features opleveren in korte cycli, inclusief API-integraties, states, formulieren en edge cases.",
+          "Complexe React- en Next.js-features in dagen live, inclusief API-integraties, states, formulieren en edge cases.",
       },
       {
         icon: "commerce",
@@ -274,10 +274,12 @@ export const portfolio = {
       title: "Frontend deadline, Shopify verbetering of React refactor?",
       intro:
         "Stuur kort wat er speelt. Ik reageer met een praktische inschatting van aanpak, timing en eerste stappen.",
-      emailLabel: "Mail Robin",
+      whatsappLabel: "App Robin",
+      copyEmailLabel: "Kopieer e-mail",
+      copiedLabel: "E-mail gekopieerd",
+      waMessage: "Hoi Robin, ik heb een frontend opdracht en wil graag even sparren.",
       linkedinLabel: "LinkedIn",
       githubLabel: "GitHub",
-      mailSubject: "Frontend opdracht",
       details: [
         "React / Next.js feature delivery",
         "Shopify Plus front-end",
@@ -300,17 +302,17 @@ export const portfolio = {
     skipLink: "Skip to content",
     hero: {
       eyebrow: "Senior Freelance React / Next.js Developer",
-      title: "Frontend delivery under pressure.",
+      title: "Features live in days, not weeks.",
       intro:
-        "I ship React, Next.js and Shopify improvements fast, without dropping quality or accessibility.",
+        "I help product and e-commerce teams ship complex frontend faster — without speed coming at the cost of UX, stability or maintainability.",
       location: "Amsterdam / remote / hybrid",
       availability: "Available for senior frontend engagements",
       primaryCta: "Book a call",
       secondaryCta: "View cases",
       proof: [
-        "6+ years frontend experience",
-        "React, Next.js, TypeScript",
-        "Performance, WCAG 2.2, Shopify",
+        "Complex frontend flows & component structure",
+        "Clear build patterns, stays maintainable",
+        "React, Next.js, TypeScript, Shopify",
       ],
       stats: [
         { value: "8", label: "recent teams" },
@@ -320,12 +322,12 @@ export const portfolio = {
     },
     profile: {
       eyebrow: "Profile",
-      title: "Senior frontend capacity without handover chaos.",
+      title: "Speed that doesn't sacrifice UX, stability or maintainability.",
       body:
-        "I join product teams, agencies and e-commerce organizations when a lot needs to be shipped, the planning is tight and the frontend cannot become a pile of one-off fixes. My strength is delivering production-ready work quickly without sacrificing accessibility, performance or maintainability.",
+        "I join product and e-commerce teams when a lot needs to be built and the planning is tight. I build complex frontend flows, clear component structure and solid build patterns, and make sure business requirements translate logically into tech. That ships features in days instead of weeks, while the frontend stays maintainable.",
       highlights: [
-        "Figma to production with details users actually notice.",
-        "Frontend architecture that helps teams keep building faster.",
+        "Complex flows and component structure that help your team keep building faster.",
+        "A logical translation from business requirements into working tech.",
         "Clear communication with business owners, product, design and backend.",
       ],
     },
@@ -334,7 +336,7 @@ export const portfolio = {
         icon: "rocket",
         title: "Feature delivery",
         text:
-          "Complex React and Next.js features shipped in short cycles, including API integrations, states, forms and edge cases.",
+          "Complex React and Next.js features live in days, including API integrations, states, forms and edge cases.",
       },
       {
         icon: "commerce",
@@ -504,10 +506,12 @@ export const portfolio = {
       title: "Frontend deadline, Shopify improvement or React refactor?",
       intro:
         "Send a short note about what is going on. I will reply with a practical view on approach, timing and first steps.",
-      emailLabel: "Email Robin",
+      whatsappLabel: "Message Robin",
+      copyEmailLabel: "Copy email",
+      copiedLabel: "Email copied",
+      waMessage: "Hi Robin, I have a frontend project and would like to spar.",
       linkedinLabel: "LinkedIn",
       githubLabel: "GitHub",
-      mailSubject: "Frontend engagement",
       details: [
         "React / Next.js feature delivery",
         "Shopify Plus frontend",
