@@ -47,7 +47,7 @@ const skillIcons: Record<string, string> = {
   "Tailwind CSS": "/tail.svg",
   SCSS: "/sass.png",
   Liquid: "/badges/shopify.svg",
-  "Design Systems": "/badges/storybook.svg",
+  "Design Systems": "/badges/design-systems.svg",
   Storybook: "/badges/storybook.svg",
   Figma: "/badges/figma.svg",
   "WCAG 2.2": "/badges/accessibility.svg",
