@@ -13,7 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import Image from "next/image";
-import type { CSSProperties, SVGProps } from "react";
+import type { SVGProps } from "react";
 import { useEffect, useMemo, useState } from "react";
 
 import { Locale, portfolio, profile } from "@/data";
@@ -51,9 +51,9 @@ const skillIcons: Record<string, string> = {
   Storybook: "/badges/storybook.svg",
   Figma: "/badges/figma.svg",
   "WCAG 2.2": "/badges/accessibility.svg",
-  ARIA: "/badges/accessibility.svg",
   Accessibility: "/badges/accessibility.svg",
   "Core Web Vitals": "/badges/vitals.svg",
+  Vite: "/badges/vite.svg",
   Vitest: "/badges/vitest.svg",
   Playwright: "/badges/playwright.svg",
   GraphQL: "/badges/graphql.svg",
@@ -77,12 +77,14 @@ function SkillBadge({
   strong?: boolean;
 }) {
   const icon = skillIcons[skill];
+  const hasDarkIcon = skill === "Next.js";
 
   return (
     <span
       className={[
         "tech-badge legacy-tech-badge",
         icon ? "has-icon" : "text-only",
+        hasDarkIcon ? "dark-logo" : "",
         compact ? "compact" : "",
         strong ? "strong" : "",
       ]
@@ -98,7 +100,7 @@ function SkillBadge({
             alt=""
             width={22}
             height={22}
-            loading="eager"
+            loading="lazy"
             unoptimized
           />
         </span>
@@ -135,40 +137,6 @@ export default function Home() {
     document.documentElement.lang = locale;
   }, [locale]);
 
-  useEffect(() => {
-    let frame = 0;
-
-    const updateScrollVars = () => {
-      frame = 0;
-      const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
-
-      document.documentElement.style.setProperty(
-        "--scroll-progress",
-        progress.toFixed(4)
-      );
-      document.documentElement.style.setProperty(
-        "--scroll-y",
-        `${window.scrollY.toFixed(0)}px`
-      );
-    };
-
-    const onScroll = () => {
-      if (!frame) {
-        frame = window.requestAnimationFrame(updateScrollVars);
-      }
-    };
-
-    updateScrollVars();
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (frame) window.cancelAnimationFrame(frame);
-    };
-  }, []);
-
   return (
     <div className="site-shell min-h-screen bg-background text-foreground">
       <a className="skip-link" href="#content">
@@ -177,7 +145,7 @@ export default function Home() {
 
       <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4 sm:px-6">
         <nav
-          className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-ink/90 px-3 py-2 text-white shadow-2xl shadow-black/20 backdrop-blur-xl"
+          className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-ink/95 px-3 py-2 text-white shadow-2xl shadow-black/20"
           aria-label={locale === "nl" ? "Hoofdnavigatie" : "Main navigation"}
         >
           <a
@@ -197,7 +165,9 @@ export default function Home() {
                 {profile.name}
               </span>
               <span className="block text-xs text-white/60">
-                Frontend delivery specialist
+                {locale === "nl"
+                  ? "Features in dagen, niet weken"
+                  : "Features in days, not weeks"}
               </span>
             </span>
           </a>
@@ -316,62 +286,41 @@ export default function Home() {
                   </defs>
 
                   {/* Requirement -> Build */}
-                  <path id="conn-1" d="M 95 120 C 175 150, 215 200, 275 255" />
+                  <path id="conn-1" d="M 95 120 C 165 150, 205 205, 252 250" />
                   {/* Build -> Ship */}
-                  <path id="conn-2" d="M 275 255 C 215 315, 195 355, 135 400" />
+                  <path id="conn-2" d="M 252 250 C 205 310, 195 350, 140 400" />
 
                   <path
                     className="connector-base"
-                    d="M 95 120 C 175 150, 215 200, 275 255"
+                    d="M 95 120 C 165 150, 205 205, 252 250"
                   />
                   <path
                     className="connector-base"
-                    d="M 275 255 C 215 315, 195 355, 135 400"
+                    d="M 252 250 C 205 310, 195 350, 140 400"
                   />
 
                   <path
                     className="connector-flow"
-                    d="M 95 120 C 175 150, 215 200, 275 255"
+                    d="M 95 120 C 165 150, 205 205, 252 250"
                   />
                   <path
-                    className="connector-flow connector-flow-delayed"
-                    d="M 275 255 C 215 315, 195 355, 135 400"
+                    className="connector-flow"
+                    d="M 252 250 C 205 310, 195 350, 140 400"
                   />
 
-                  <circle className="connector-dot" r="5">
-                    <animateMotion
-                      dur="3.6s"
-                      repeatCount="indefinite"
-                      keyPoints="0;1"
-                      keyTimes="0;1"
-                      calcMode="linear"
-                    >
-                      <mpath href="#conn-1" />
-                    </animateMotion>
-                  </circle>
-                  <circle className="connector-dot" r="5">
-                    <animateMotion
-                      dur="3.6s"
-                      begin="1.4s"
-                      repeatCount="indefinite"
-                      keyPoints="0;1"
-                      keyTimes="0;1"
-                      calcMode="linear"
-                    >
-                      <mpath href="#conn-2" />
-                    </animateMotion>
-                  </circle>
+                  <circle className="connector-dot" cx="95" cy="120" r="5" />
+                  <circle className="connector-dot" cx="252" cy="250" r="5" />
+                  <circle className="connector-dot" cx="140" cy="400" r="5" />
                 </svg>
 
                 {[
                   ["requirement", "01", "Requirement"],
                   ["build", "02", "Build"],
                   ["ship", "03", "Ship"],
-                ].map(([key, count, label], index) => (
+                ].map(([key, count, label]) => (
                   <div
                     key={key}
                     className={`release-node release-node-${key}`}
-                    style={{ "--node-index": index } as CSSProperties}
                   >
                     <i>{count}</i>
                     <span>{label}</span>
@@ -496,8 +445,8 @@ export default function Home() {
 
             <div className="skill-marquee mt-10" aria-hidden="true">
               <div>
-                {[...allSkills, ...allSkills].map((skill, index) => (
-                  <SkillBadge key={`${skill}-${index}`} skill={skill} />
+                {allSkills.map((skill) => (
+                  <SkillBadge key={skill} skill={skill} />
                 ))}
               </div>
             </div>

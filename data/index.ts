@@ -16,7 +16,14 @@ const sharedStack = {
     groups: [
       {
         label: "Core",
-        skills: ["React", "Next.js", "TypeScript", "JavaScript", "Node.js"],
+        skills: [
+          "React",
+          "Next.js",
+          "Vite",
+          "TypeScript",
+          "JavaScript",
+          "Node.js",
+        ],
       },
       {
         label: "Interface",
@@ -24,7 +31,7 @@ const sharedStack = {
       },
       {
         label: "Quality",
-        skills: ["WCAG 2.2", "ARIA", "Core Web Vitals", "Vitest", "Playwright"],
+        skills: ["WCAG 2.2", "Core Web Vitals", "Vitest", "Playwright"],
       },
       {
         label: "Commerce & Data",
@@ -40,7 +47,14 @@ const sharedStack = {
     groups: [
       {
         label: "Core",
-        skills: ["React", "Next.js", "TypeScript", "JavaScript", "Node.js"],
+        skills: [
+          "React",
+          "Next.js",
+          "Vite",
+          "TypeScript",
+          "JavaScript",
+          "Node.js",
+        ],
       },
       {
         label: "Interface",
@@ -48,7 +62,7 @@ const sharedStack = {
       },
       {
         label: "Quality",
-        skills: ["WCAG 2.2", "ARIA", "Core Web Vitals", "Vitest", "Playwright"],
+        skills: ["WCAG 2.2", "Core Web Vitals", "Vitest", "Playwright"],
       },
       {
         label: "Commerce & Data",
@@ -83,7 +97,7 @@ export const portfolio = {
         "React, Next.js, TypeScript, Shopify",
       ],
       stats: [
-        { value: "8", label: "recente teams" },
+        { value: "8", label: "teams versterkt" },
         { value: "WCAG", label: "2.2 implementatie" },
         { value: "Shopify", label: "Plus storefronts" },
       ],
@@ -122,14 +136,14 @@ export const portfolio = {
         icon: "speed",
         title: "Performance & accessibility",
         text:
-          "Core Web Vitals, bundle size, runtime performance, keyboard navigatie, ARIA en WCAG 2.2 implementatie.",
+          "Core Web Vitals, bundle size, runtime performance, keyboard navigatie en WCAG 2.2 implementatie.",
       },
     ],
     work: {
       eyebrow: "Geselecteerd werk",
       title: "Cases die snelheid, structuur en businesswaarde laten zien.",
       intro:
-        "Geen productielinks of vage visuals. De cases tonen welk probleem is opgelost, wat er is gebouwd en waarom dat relevant was voor het team.",
+        "Elke case toont het probleem, wat ik bouwde en hoe het team er sneller mee verder kon — complexe frontend, productieklaar opgeleverd.",
       outcomeLabel: "Resultaat",
       scopeLabel: "Scope",
       items: [
@@ -170,7 +184,7 @@ export const portfolio = {
             "React applicaties toegankelijker gemaakt voor software die door overheid en sociale veiligheidsorganisaties wordt gebruikt.",
           scope: [
             "WCAG 2.2 migratie over meerdere applicaties",
-            "Focus management, ARIA patronen en keyboard flows",
+            "Focus management, semantische patronen en keyboard flows",
             "Component audits en refactors voor inclusieve UX",
           ],
           stack: ["React", "TypeScript", "WCAG 2.2"],
@@ -315,7 +329,7 @@ export const portfolio = {
         "React, Next.js, TypeScript, Shopify",
       ],
       stats: [
-        { value: "8", label: "recent teams" },
+        { value: "8", label: "teams strengthened" },
         { value: "WCAG", label: "2.2 implementation" },
         { value: "Shopify", label: "Plus storefronts" },
       ],
@@ -354,14 +368,14 @@ export const portfolio = {
         icon: "speed",
         title: "Performance & accessibility",
         text:
-          "Core Web Vitals, bundle size, runtime performance, keyboard navigation, ARIA and WCAG 2.2 implementation.",
+          "Core Web Vitals, bundle size, runtime performance, keyboard navigation and WCAG 2.2 implementation.",
       },
     ],
     work: {
       eyebrow: "Selected work",
       title: "Cases that show speed, structure and business value.",
       intro:
-        "No production links or vague visuals. The cases show the problem, what was built and why it mattered to the team.",
+        "Each case shows the problem, what I built and how it helped the team move faster — complex frontend, delivered production-ready.",
       outcomeLabel: "Outcome",
       scopeLabel: "Scope",
       items: [
@@ -402,7 +416,7 @@ export const portfolio = {
             "Improved accessibility across React applications used by Dutch government and social safety organizations.",
           scope: [
             "WCAG 2.2 migration across multiple applications",
-            "Focus management, ARIA patterns and keyboard flows",
+            "Focus management, semantic patterns and keyboard flows",
             "Component audits and refactors for inclusive UX",
           ],
           stack: ["React", "TypeScript", "WCAG 2.2"],
