@@ -40,7 +40,7 @@ const capabilityIcons = {
 
 const skillIcons: Record<string, string> = {
   React: "/re.svg",
-  "Next.js": "/next.svg",
+  "Next.js": "/badges/nextjs-mark.svg",
   TypeScript: "/ts.svg",
   JavaScript: "/js.png",
   "Node.js": "/nodejs.png",
@@ -77,14 +77,12 @@ function SkillBadge({
   strong?: boolean;
 }) {
   const icon = skillIcons[skill];
-  const hasDarkIcon = skill === "Next.js";
 
   return (
     <span
       className={[
         "tech-badge legacy-tech-badge",
         icon ? "has-icon" : "text-only",
-        hasDarkIcon ? "dark-logo" : "",
         compact ? "compact" : "",
         strong ? "strong" : "",
       ]

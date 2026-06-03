@@ -745,20 +745,6 @@
   width: 1.28rem;
 }
 
-.legacy-tech-badge.dark-logo .legacy-icon-wrap,
-.legacy-tech-badge.compact.dark-logo .legacy-icon-wrap {
-  background: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    0 10px 24px rgba(0, 0, 0, 0.16);
-}
-
-.legacy-tech-badge.dark-logo .legacy-icon-wrap img {
-  max-height: 1.08rem;
-  width: 1.08rem;
-}
-
 .legacy-tech-badge.compact.has-icon .legacy-badge-label {
   border: 0;
   clip: rect(0 0 0 0);
