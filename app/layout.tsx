@@ -16,7 +16,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://robin-gillessen.nl"),
+  metadataBase: new URL("https://www.rgdevelopment-portfolio.com"),
   title: {
     default: "Robin Gillessen | Senior Freelance Frontend Developer",
     template: "%s | Robin Gillessen",
